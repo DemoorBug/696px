@@ -1,0 +1,19 @@
+//- 布局文件
+
+doctype html
+html(lang='zh-CN')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title #{title}
+    meta(name='Keywords', content='健身,健身方法,健身计划,增肌,健美,运动,运动服饰')
+    meta(name='Description', content='健身吧致力于打造中国专业的运动平台,以丰富的内容:时刻健身,运动装备,运动项目,健身常识等,为广大用户提供健身资料,健身知识,包括瑜伽、街舞、拉丁舞、足球、普拉提、游泳等')
+    link(rel='Shortcut Icon', href='img/title.ico', type='image/x-icon')
+
+    block topcss
+  body
+    include ./includes/header
+    block content
+    include ./includes/footer
+    block botjs

@@ -1,0 +1,85 @@
+extends ../layoutadmin
+block nav
+  .nav-collapse
+    ul.nav
+      li
+        a(href='index-2.html')
+          span.se7en-home(aria-hidden='true')
+          | Dashboard
+      li
+        a(href='social.html')
+          span.se7en-feed(aria-hidden='true')
+          | Social Feed
+      li.dropdown
+        a(data-toggle='dropdown', href='#')
+          span.se7en-star(aria-hidden='true')
+          | Features
+      li.dropdown
+        a.current(data-toggle='dropdown', href='#')
+          span.se7en-forms(aria-hidden='true')
+          | Forms
+      li.dropdown
+        a(data-toggle='dropdown', href='#')
+          span.se7en-tables(aria-hidden='true')
+          | Tables
+      li
+        a(href='charts.html')
+          span.se7en-charts(aria-hidden='true')
+          | Charts
+      li.dropdown
+        a(data-toggle='dropdown', href='#')
+          span.se7en-pages(aria-hidden='true')
+          | Pages
+      li
+        a(href='gallery.html')
+          span.se7en-gallery(aria-hidden='true')
+          | Gallery
+
+block content
+  .container-fluid.main-content
+    .page-title
+      h1
+        | Form Components
+    .row
+      .col-lg-12
+        .widget-container.fluid-height.clearfix
+          .heading
+            i.icon-reorder
+            | Basic Components
+          .widget-content.padded
+            form.form-horizontal(action='#')
+              .form-group
+                label.control-label.col-md-2 Input
+                .col-md-7
+                  input.form-control(placeholder='Text', type='text')
+              .form-group
+                label.control-label.col-md-2 Without Input
+                .col-md-4
+                  .fileupload.fileupload-new(data-provides='fileupload')
+                    span.btn.btn-default.btn-file
+                      span.fileupload-new Select file
+                      span.fileupload-exists Change
+                      input(type='file')
+                    span.fileupload-preview
+                    button.close.fileupload-exists(data-dismiss='fileupload', style='float:none', type='button') &times;
+              .form-group
+                label.control-label.col-md-2 Radio Buttons
+                .col-md-7
+                  label.radio-inline
+                    input(name='optionsRadios2', type='radio', value='option1')
+                    span Option 1
+                  label.radio-inline
+                    input(checked='', name='optionsRadios2', type='radio', value='option2')
+                    span Option 2
+                  label.radio-inline
+                    input(name='optionsRadios2', type='radio', value='option3')
+                    span Option 3
+              .form-group
+                label.control-label.col-md-2 Textarea
+                .col-md-7
+                  textarea.form-control(rows='3')
+              .form-group
+                label.control-label.col-md-2 Form Actions
+                .col-md-7
+                  button.btn.btn-default-outline Cancel
+                  button.btn.btn-primary(type='submit') Submit

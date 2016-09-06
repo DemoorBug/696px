@@ -1,0 +1,36 @@
+.footer
+  .container
+    | &copy; 2015
+    a(href='http://www.696px.com') 696Px健身吧
+    | &nbsp;
+    | 由696Px健身吧维护更新
+    | &nbsp; /
+    a(href='list/aboutus/aboutus.html', title='关于696px', target='_blank')
+      | 关于696Px
+    | &nbsp;/
+    script(src='http://s11.cnzz.com/z_stat.php?id=1256440272&  web_id=1256440272', language='JavaScript')
+//- 登录页面
+.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
+  .modal-dialog.modal-sm-user
+    #login
+      form.container.offset1.loginform(action='#', method='post')
+        #owl-login
+          .hand
+          .hand.hand-r
+          .arms
+            .arm
+            .arm.arm-r
+        .pad
+          input(type='hidden', name='_csrf', value='9IAtUxV2CatyxHiK2LxzOsT6wtBE6h8BpzOmk=')
+          .control-group
+            .controls
+              label.control-label.fa.fa-envelope(for='email')
+              input#email.form-control.input-medium(type='text', name='email', placeholder='请输入登录用户名/邮箱', tabindex='1')
+          .control-group
+            .controls
+              label.control-label.fa.fa-asterisk(for='password')
+              input#password.form-control.input-medium(type='password', name='password', placeholder='6-16位密码，区分大小写，不能使用空格', tabindex='2')
+        .form-actions
+          a.btn.pull-left.btn-link.text-muted(href='#', tabindex='5') 忘记密码?
+          a#text-muted.btn.btn-link.text-muted(href='#', tabindex='6') 注册
+          button.btn.btn-primary(type='submit', tabindex='4') 登录

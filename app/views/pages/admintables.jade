@@ -1,0 +1,80 @@
+extends ../layoutadmin
+block nav
+  .nav-collapse
+    ul.nav
+      li
+        a(href='index-2.html')
+          span.se7en-home(aria-hidden='true')
+          | Dashboard
+      li
+        a(href='social.html')
+          span.se7en-feed(aria-hidden='true')
+          | Social Feed
+      li.dropdown
+        a(data-toggle='dropdown', href='#')
+          span.se7en-star(aria-hidden='true')
+          | Features
+      li.dropdown
+        a(data-toggle='dropdown', href='#')
+          span.se7en-forms(aria-hidden='true')
+          | Forms
+      li.dropdown
+        a.current(data-toggle='dropdown', href='#')
+          span.se7en-tables(aria-hidden='true')
+          | Tables
+      li
+        a(href='charts.html')
+          span.se7en-charts(aria-hidden='true')
+          | Charts
+      li.dropdown
+        a(data-toggle='dropdown', href='#')
+          span.se7en-pages(aria-hidden='true')
+          | Pages
+      li
+        a(href='gallery.html')
+          span.se7en-gallery(aria-hidden='true')
+          | Gallery
+
+block content
+  .container-fluid.main-content
+    .page-title
+      h1
+        | Editable DataTables
+    //- DataTables Example
+    .row
+      .col-lg-12
+        .widget-container.fluid-height.clearfix
+          .heading
+            i.icon-table
+            | DataTable with Sorting
+          .widget-content.padded.clearfix
+            table#datatable-editables.table.table-bordered.table-striped
+              thead
+                th
+                  | First Name
+                th
+                  | Last Name
+                th.hidden-xs
+                  | Email
+                th.hidden-xs
+                  | Date Added
+                th.hidden-xs
+                  | Status
+                th(width='60')
+                th(width='75')
+              tbody
+                tr
+                  td
+                    | Robert
+                  td
+                    | Kelso
+                  td.hidden-xs
+                    | robert@gmail.com
+                  td.hidden-xs
+                    | 8-15-2013
+                  td.hidden-xs
+                    | Approved
+                  td
+                    a.edit-row(href='#') Edit
+                  td
+                    a.delete-row(href='#') Delete

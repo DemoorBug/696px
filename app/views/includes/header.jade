@@ -1,0 +1,38 @@
+nav.navbar.navbar-inverse
+  .container.nav_bar
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+        span.sr-only 696px
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='http://www.696px.com')
+        img(alt='696Px健身吧_中国专业健身网', src='/img/logo.png')
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse.navbar_collapse
+      ul.nav.navbar-nav.navbar_nav
+        li
+          a(href='http://www.696px.com/list/hour/hour.html')
+            em &#xE903;
+            | 时刻健身
+            span.sr-only (current)
+        li
+          a(href='http://www.696px.com/list/fashion/fashion.html')
+            em &#xE90C;
+            | 时尚健身
+        li
+          a(href='http://www.696px.com/list/room/room.html')
+            em &#xE909;
+            | 健身房
+        li
+          a(href='http://www.696px.com/list/diet/diet.html')
+            em &#xE904;
+            | 饮食健康
+      ul.nav.navbar-nav.navbar-right
+        li
+          a.log-in(href='javascript:;', data-toggle='modal', data-target='.bs-example-modal-lg') 登录
+        li
+          a.log-up(href='javascript:;', data-toggle='modal', data-target='.bs-example-modal-lg') 注册
+      form#navbar_form.navbar-form.navbar-right.clearfix.hidden-sm(role='search')
+        .form-group.pull-left
+          input.form_control(type='text', placeholder='请输入想搜索的内容...')
+        button.btn_default.pull-left(type='submit') &#xE90F;

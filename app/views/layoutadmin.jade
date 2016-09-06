@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title
+      | #{title}
+    link(rel='stylesheet', type='text/css', href='/admin/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/admin/stylesheets/font-awesome.css')
+    link(rel='stylesheet', type='text/css', href='/admin/stylesheets/se7en-font.css')
+    link(rel='stylesheet', type='text/css', href='/admin/stylesheets/style.css')
+    link(rel='alternate stylesheet', type='text/css', href='/admin/stylesheets/color/gray.css',title="gray-theme")
+    link(rel='alternate stylesheet', type='text/css', href='/admin/stylesheets/color/green.css',title="green-theme")
+    link(rel='alternate stylesheet', type='text/css', href='/admin/stylesheets/color/magenta.css',title="magenta-theme")
+    link(rel='alternate stylesheet', type='text/css', href='/admin/stylesheets/color/orange.css',title="orange-theme")
+    script(type='text/javascript', src='/admin/javascripts/jquery.min.js')
+    script(type='text/javascript', src='/admin/javascripts/bootstrap.min.js')
+    script(type='text/javascript', src='/admin/javascripts/bootstrap-fileupload.js')
+    script(type='text/javascript', src='/admin/javascripts/jquery.easy-pie-chart.js')
+    script(type='text/javascript', src='/admin/javascripts/jquery.sparkline.min.js')
+    script(type='text/javascript', src='/admin/javascripts/main.js')
+    script(type='text/javascript', src='/admin/javascripts/styleswitcher.js')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no', name='viewport')
+  body
+    include ./includes/adminheader
+    block content

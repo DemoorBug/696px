@@ -1,0 +1,18 @@
+{
+  "name": "696px",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "DemoorBug <1004041672@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DemoorBug/696px",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ]
+}

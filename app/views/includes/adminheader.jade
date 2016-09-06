@@ -1,0 +1,50 @@
+body
+  .modal-shiftfix
+    .navbar.navbar-fixed-top.scroll-hide
+      .container-fluid.top-bar
+        .pull-right
+          ul.nav.navbar-nav.pull-right
+            li.dropdown.settings.hidden-xs
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.se7en-gear(aria-hidden='true')
+                .sr-only
+                  | Settings
+              ul.dropdown-menu
+                li
+                  a.settings-link.blue(href="javascript:chooseStyle('none', 30)")
+                    span
+                    | &#x84DD;&#x8272;
+                li
+                  a.settings-link.green(href="javascript:chooseStyle('green-theme', 30)")
+                    span
+                    | &#x7EFF;&#x8272;
+                li
+                  a.settings-link.orange(href="javascript:chooseStyle('orange-theme', 30)")
+                    span
+                    | &#x6A59;&#x8272;
+                li
+                  a.settings-link.magenta(href="javascript:chooseStyle('magenta-theme', 30)")
+                    span
+                    | &#x7D2B;&#x8272;
+                li
+                  a.settings-link.gray(href="javascript:chooseStyle('gray-theme', 30)")
+                    span
+                    | &#x7070;&#x8272;
+            li.dropdown.user.hidden-xs
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                img(width='34', height='34', src='/admin/images/avatar-male.jpg')
+                | &#x7528;&#x6237;&#x540D;
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='login1.html')
+                    i.icon-signout
+                    | Logout
+        button.navbar-toggle
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.logo(href='index-2.html') se7en
+      .container-fluid.main-nav.clearfix
+        block nav
+
