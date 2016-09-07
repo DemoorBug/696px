@@ -39,42 +39,47 @@ block content
   .container-fluid.main-content
     .page-title
       h1
-        | Editable DataTables
+        | #{title}
     //- DataTables Example
     .row
       .col-lg-12
         .widget-container.fluid-height.clearfix
           .heading
             i.icon-table
-            | DataTable with Sorting
+            | #{update}
           .widget-content.padded.clearfix
             table#datatable-editables.table.table-bordered.table-striped
               thead
                 th
-                  | First Name
-                th
-                  | Last Name
-                th.hidden-xs
-                  | Email
-                th.hidden-xs
-                  | Date Added
-                th.hidden-xs
-                  | Status
-                th(width='60')
-                th(width='75')
+                  | 文章标题
+                th.hidden-xs(width='10%')
+                  | 分类
+                th.hidden-xs(width='10%')
+                  | 来源
+                th.hidden-xs(width='15%')
+                  | 录入时间
+                th.hidden-xs(width='10%')
+                  | Pv
+                th(width='60') 查看
+                th(width='60') 更新
+                th(width='75') 删除
               tbody
-                tr
-                  td
-                    | Robert
-                  td
-                    | Kelso
-                  td.hidden-xs
-                    | robert@gmail.com
-                  td.hidden-xs
-                    | 8-15-2013
-                  td.hidden-xs
-                    | Approved
-                  td
-                    a.edit-row(href='#') Edit
-                  td
-                    a.delete-row(href='#') Delete
+                each item in movies
+                  tr(class="item-id-#{item._id}")
+                    td
+                      | #{item.title}
+                    td.hidden-xs
+                      | 分类
+                    td.hidden-xs
+                      | #{item.source}
+                    td.hidden-xs
+                      | #{moment(item.meta.updateAt).format('YYYY/MM/DD HH:mm:ss')}
+                    td.hidden-xs
+                      | #{item.pv}
+                    td
+                      a(target="_blank",href="../movie/#{item._id}") 查看
+                    td
+                      a(target="_blank",href="../admin/update/#{item._id}") 修改
+                    td
+                      a.dal(href="javascript:;",data-id="#{item._id}") 删除
+  script(src="/js/admin.js")

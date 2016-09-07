@@ -1,6 +1,5 @@
 var Index = require('../app/controllers/index')
 var Movie = require('../app/controllers/movie')
-var Admin = require('../app/controllers/admin')
 
 
 
@@ -9,9 +8,14 @@ module.exports = function(app) {
   app.get('/',Index.index)
 
 // movie
-  app.get('/movie', Movie.detail)
+  app.get('/movie/:id', Movie.detail)
 
 // admin
-  app.get('/admin',Admin.new)
-  app.get('/admin/form',Admin.form)
+  app.get('/admin',Movie.tables)
+  app.get('/admin/form',Movie.form)
+  app.delete('/admin', Movie.del)
+// 存储
+  app.post('/admin/save', Movie.save)
+// 更新
+  app.get('/admin/update/:id', Movie.update)
 }

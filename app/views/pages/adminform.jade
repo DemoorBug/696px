@@ -39,31 +39,46 @@ block content
   .container-fluid.main-content
     .page-title
       h1
-        | Form Components
+        | #{title}
     .row
       .col-lg-12
         .widget-container.fluid-height.clearfix
           .heading
             i.icon-reorder
-            | Basic Components
+            | #{update}
           .widget-content.padded
-            form.form-horizontal(action='#')
+            form.form-horizontal(method="post",action="/admin/save")
+              if movie._id
+                input(type="hidden",name="movie[_id]",value=movie._id)
               .form-group
-                label.control-label.col-md-2 Input
+                label.control-label.col-md-2 标题
                 .col-md-7
-                  input.form-control(placeholder='Text', type='text')
+                  input.form-control(placeholder='文章标题', type='text',name="movie[title]",value=movie.title)
               .form-group
-                label.control-label.col-md-2 Without Input
+                label.control-label.col-md-2 来源
+                .col-md-7
+                  input.form-control(placeholder='文章来源', type='text',name="movie[source]",value=movie.source)
+              .form-group
+                label.control-label.col-md-2 上传图片
                 .col-md-4
-                  .fileupload.fileupload-new(data-provides='fileupload')
-                    span.btn.btn-default.btn-file
-                      span.fileupload-new Select file
-                      span.fileupload-exists Change
-                      input(type='file')
-                    span.fileupload-preview
-                    button.close.fileupload-exists(data-dismiss='fileupload', style='float:none', type='button') &times;
+                  if movie.poster
+                    .fileupload.fileupload-exists(data-provides='fileupload')
+                      span.btn.btn-default.btn-file
+                        span.fileupload-new 选择图片
+                        span.fileupload-exists 更换
+                        input(type='file',name="movie[poster]")
+                      span.fileupload-preview #{movie.poster}
+                      button.close.fileupload-exists(data-dismiss='fileupload', style='float:none', type='button') &times;
+                  else
+                    .fileupload.fileupload-new(data-provides='fileupload')
+                      span.btn.btn-default.btn-file
+                        span.fileupload-new 选择图片
+                        span.fileupload-exists 更换
+                        input(type='file',name="movie[poster]")
+                      span.fileupload-preview #{movie.poster}
+                      button.close.fileupload-exists(data-dismiss='fileupload', style='float:none', type='button') &times;
               .form-group
-                label.control-label.col-md-2 Radio Buttons
+                label.control-label.col-md-2 分类选择
                 .col-md-7
                   label.radio-inline
                     input(name='optionsRadios2', type='radio', value='option1')
@@ -75,11 +90,11 @@ block content
                     input(name='optionsRadios2', type='radio', value='option3')
                     span Option 3
               .form-group
-                label.control-label.col-md-2 Textarea
+                label.control-label.col-md-2 文章内容
                 .col-md-7
-                  textarea.form-control(rows='3')
+                  textarea.form-control(rows='10',placeholder="html形式",name="movie[summary]") #{movie.summary}
               .form-group
-                label.control-label.col-md-2 Form Actions
+                label.control-label.col-md-2 发布
                 .col-md-7
-                  button.btn.btn-default-outline Cancel
-                  button.btn.btn-primary(type='submit') Submit
+                  button.btn.btn-default-outline 取消
+                  button.btn.btn-primary(type='submit') 提交

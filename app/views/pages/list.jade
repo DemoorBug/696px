@@ -2,19 +2,19 @@ doctype html
 html(lang='zh-CN')
   head
     meta(charset='UTF-8')
-    |     
+    |
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    |     
+    |
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    |     
+    |
     title 696px
-    |     
+    |
     meta(name='Keywords', content='健身,健身方法,健身计划,增肌,健美,运动,运动服饰')
-    |     
+    |
     meta(name='Description', content='健身吧致力于打造中国专业的运动平台,以丰富的内容:时刻健身,运动装备,运动项目,健身常识等,为广大用户提供健身资料,健身知识,包括瑜伽、街舞、拉丁舞、足球、普拉提、游泳等')
-    |     
+    |
     link(rel='Shortcut Icon', href='img/title.ico', type='image/x-icon')
-    |     
+    |
     link(rel='stylesheet', href='css/list-9c6e01dfb1.css')
   body
     nav.navbar.navbar-inverse
@@ -22,50 +22,50 @@ html(lang='zh-CN')
         .navbar-header
           button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
             span.sr-only Toggle navigation
-            |         
+            |
             span.icon-bar
-            |         
+            |
             span.icon-bar
-            |         
+            |
             span.icon-bar
-          |       
+          |
           a.navbar-brand(href='http://www.696px.com')
             img(alt='696Px健身吧_中国专业健身网', src='img/logo.png')
-        |     
+        |
         #bs-example-navbar-collapse-1.collapse.navbar-collapse.navbar_collapse
           ul.nav.navbar-nav.navbar_nav
             li
               a(href='http://www.696px.com/list/hour/hour.html')
                 em &#xE903;
-                | &#x65F6;&#x523B;&#x5065;&#x8EAB; 
+                | &#x65F6;&#x523B;&#x5065;&#x8EAB;
                 span.sr-only (current)
-            |         
+            |
             li
               a(href='http://www.696px.com/list/fashion/fashion.html')
                 em &#xE90C;
                 | &#x65F6;&#x5C1A;&#x5065;&#x8EAB;
-            |         
+            |
             li
               a(href='http://www.696px.com/list/room/room.html')
                 em &#xE909;
                 | &#x5065;&#x8EAB;&#x623F;
-            |         
+            |
             li
               a(href='http://www.696px.com/list/diet/diet.html')
                 em &#xE904;
                 | &#x996E;&#x98DF;&#x5065;&#x5EB7;
-          |       
+          |
           ul.nav.navbar-nav.navbar-right
             li
               a.log-in(href='javascript:;', data-toggle='modal', data-target='.bs-example-modal-lg') &#x767B;&#x9646;
-            |         
+            |
             li
               a.log-up(href='javascript:;', data-toggle='modal', data-target='.bs-example-modal-lg') &#x6CE8;&#x518C;
-          |       
+          |
           form#navbar_form.navbar-form.navbar-right.clearfix.hidden-sm(role='search')
             .form-group.pull-left
               input.form_control(type='text', placeholder='请输入想搜索的内容...')
-            |             
+            |
             button.btn_default.pull-left(type='submit') &#xE90F;
         // /.navbar-collapse
       // /.container-fluid
@@ -77,125 +77,52 @@ html(lang='zh-CN')
             .mod_a
               a.mod_a_a(href='http://www.696px.com', target='_blank')
                 i &#xE905;
-                |                         
+                |
                 em 696Px&#x5065;&#x8EAB;&#x5427;
-              |                     
+              |
               span &raquo;
-              |                     
+              |
               b &#x8FD0;&#x52A8;&#x635F;&#x4F24;
-            |                 
+            |
             ul.mod_u
               li
                 span {{span}}
-                |                         
+                |
                 a(href='{{href}}', target='_blank', title='{{index}}') {{index}}
             // Page换页
             .pageNum
               span
                 a(target='_self', href='#') &lt;
-              |                     
+              |
               span#pageNN
                 a(target='_self', href='#') 1
-              |                     
+              |
               span
                 a(target='_self', href='#p=2') 2
-              |                     
+              |
               span
                 | ...
-              |                     
+              |
               span
                 a(target='_self', href='#') 55
-              |                     
+              |
               span
                 a(target='_self', href='#') &gt;
-        |         
-        .col-lg-4
-          .matter_fr_boxOne.Top
-            .mi_cn.clearfix
-              h3.mi_h3 &#x65B0;&#x95FB;&#x70ED;&#x8BCD;&#x699C;
-              |                     
-              .more
-                a(href='http://www.696px.com/list/word/word.html', target='_blank', style='margin-right:10px;')
-                  em.ko &#xE900;
-                  |                                 &#x66F4;&#x591A;
-            |                 
-            .mi_cc
-              .mi_cc_ci
-                ul.mi_ul
-                  li
-                    i({{class}}='') {{i}}
-                    |                                 
-                    span {{center}}
-                    |                                 
-                    a(href='{{href}}', target='_blank', title='{{index}}') {{index}}
-          |             
-          .matter_fr_boxTwo
-            .mi_cn.clearfix
-              h3.mi_h3 &#x70ED;&#x70B9;&#x7126;&#x8DDD;
-              |                     
-              .more
-                a(href='http://www.696px.com/list/burnt/burnt.html', target='_blank', style='margin-right:10px;')
-                  em.ko &#xE900;
-                  |                                 &#x66F4;&#x591A;
-            |                 
-            .mi_bc
-              ul.mi_bc_ul
-                li
-                  a(href='{{href}}', title='{{index}}', target='_blank')
-                    span.mi_bc_img
-                      img(src='{{img}}', alt='{{index}}')
-                    |                                 
-                    em {{index}}
-                    |                                 
-                    span.mi_bc_posi {{span}}
-                |                          
-                li
-                  a(href='{{href}}', title='{{index}}', target='_blank')
-                    span.mi_bc_img
-                      img(src='{{img}}', alt='{{index}}')
-                    |                                 
-                    em {{index}}
-                    |                                 
-                    span.mi_bc_posi {{span}}
-                |                          
-                li
-                  a(href='{{href}}', title='{{index}}', target='_blank')
-                    span.mi_bc_img
-                      img(src='{{img}}', alt='{{index}}')
-                    |                                 
-                    em {{index}}
-                    |                                 
-                    span.mi_bc_posi {{span}}
-          |             
-          .matter_fr_boxthree
-            .mi_cn.clearfix
-              h3.mi_h3 &#x5065;&#x8EAB;&#x8BEF;&#x533A;
-              |                     
-              .more
-                a(href='http://www.696px.com/list/burnt/burnt.html', target='_blank', style='margin-right:10px;')
-                  em.ko &#xE900;
-                  |                                 &#x66F4;&#x591A;
-            |                 
-            .mi_cc
-              .mi_cc_ci
-                ul.mi_ulc
-                  li
-                    i &#xE90A;
-                    |                                 
-                    a(href='{{href}}', target='_blank', title='{{index}}') {{index}}
+        |
+        include ../includes/center
     // 底部
     .footer
       .container
-        | &copy; 2015 
+        | &copy; 2015
         a(href='http://www.696px.com') 696Px&#x5065;&#x8EAB;&#x5427;
         |         &nbsp;
         |         &#x7531;696Px&#x5065;&#x8EAB;&#x5427;&#x7EF4;&#x62A4;&#x66F4;&#x65B0;
         |         &nbsp; /
-        |         
+        |
         a(href='list/aboutus/aboutus.html', title='关于696px', target='_blank')
           | &#x5173;&#x4E8E;696Px
         | &nbsp;/
-        |         
+        |
         script(src='http://s11.cnzz.com/z_stat.php?id=1256440272&  web_id=1256440272', language='JavaScript')
     .modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
       .modal-dialog.modal-sm-user
@@ -203,34 +130,34 @@ html(lang='zh-CN')
           form.container.offset1.loginform(action='#', method='post')
             #owl-login
               .hand
-              |                 
+              |
               .hand.hand-r
-              |                 
+              |
               .arms
                 .arm
-                |                     
+                |
                 .arm.arm-r
-            |             
+            |
             .pad
               input(type='hidden', name='_csrf', value='9IAtUxV2CatyxHiK2LxzOsT6wtBE6h8BpzOmk=')
-              |                 
+              |
               .control-group
                 .controls
                   label.control-label.fa.fa-envelope(for='email')
-                  |                         
+                  |
                   input#email.form-control.input-medium(type='text', name='email', placeholder='请输入登录用户名/邮箱', tabindex='1', autofocus='autofocus')
-              |                 
+              |
               .control-group
                 .controls
                   label.control-label.fa.fa-asterisk(for='password')
-                  |                         
+                  |
                   input#password.form-control.input-medium(type='password', name='password', placeholder='6-16位密码，区分大小写，不能使用空格', tabindex='2')
-            |             
+            |
             .form-actions
               a.btn.pull-left.btn-link.text-muted(href='#', tabindex='5') &#x5FD8;&#x8BB0;&#x5BC6;&#x7801;&#xFF1F;
-              |                 
+              |
               a#text-muted.btn.btn-link.text-muted(href='#', tabindex='6') &#x6CE8;&#x518C;
-              |                 
+              |
               button.btn.btn-primary(type='submit', tabindex='4') &#x767B;&#x5F55;
-      |     
-      script(src='js/list-e820af130b.js')
+      |
+      script(src='/js/list-e820af130b.js')

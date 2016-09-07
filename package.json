@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/DemoorBug/696px#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "jade": "^1.11.0",
-    "mongoose": "^4.6.0"
+    "moment": "^2.14.1",
+    "mongoose": "^4.6.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "browser-sync": "^2.15.0",

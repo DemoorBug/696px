@@ -9,31 +9,29 @@ block content
           .mod_a
             a.mod_a_a(href='http://696px.com', target='_blank')
               i &#xE905;
-              em 696Px
+              em 696Px健身吧
             span &raquo;
             a(href='http://696px.com/list/fashion/fashion.html', target='_blank')
-              | shishang
+              | 分类
             span &raquo;
-            b 1
-          h2 1
+            b #{movie.title}
+          h2 #{movie.title}
           address
             | [
-            span 2015-11-28 19:40:08
+            span #{moment(movie.meta.updateAt).format('YYYY/MM/DD HH:mm:ss')}
             span.aonne
-              a(href='')
-                | plun
-            span laiyuan:696px
+              a(href='javascript:;')
+                | 评论
+            span 来源:#{movie.source}
             |                     ]
           // 主要更改内容区域
           .text
             .text_pa
-            p &#x3000;&#x3000;
-            p
-              strong
-            p
-            p
+            |!{movie.summary}
             p.text_mz
-              strong
+              strong 免责声明
+              |本文仅代表作者个人观点，与696px健身吧无关。其原创性以及文中陈述文字和内容未经本站证实，对本文以及其中全部或者部分内容、文字的真实性、完整性、及时性本站不作任何保证或承诺，请读者仅作参考，并请自行核实相关内容。
+
           .pageNum
             span
               a(target='_self', href='#') &lt;
@@ -47,60 +45,7 @@ block content
               a(target='_self', href='#') 55
             span
               a(target='_self', href='#') &gt;
-      .col-lg-4
-        .matter_fr_boxOne.Top
-          .mi_cn.clearfix
-            h3.mi_h3 xwrsc
-            .more
-              a(href='http://www.696px.com/list/word/word.html', target='_blank', style='margin-right:10px;')
-                em.ko &#xE900;
-                |                                 gengduo
-          .mi_cc
-            .mi_cc_ci
-              ul.mi_ul
-                li
-                  i({{class}}='') {{i}}
-                  span {{center}}
-                  a(href='{{href}}', target='_blank', title='{{index}}') {{index}}
-        .matter_fr_boxTwo
-          .mi_cn.clearfix
-            h3.mi_h3 redianjiaoju
-            .more
-              a(href='http://www.696px.com/list/burnt/burnt.html', target='_blank', style='margin-right:10px;')
-                em.ko &#xE900;
-                |                                 gengduo
-          .mi_bc
-            ul.mi_bc_ul
-              li
-                a(href='{{href}}', title='{{index}}', target='_blank')
-                  span.mi_bc_img
-                    img(src='{{img}}', alt='{{index}}')
-                  em {{index}}
-                  span.mi_bc_posi {{span}}
-              li
-                a(href='{{href}}', title='{{index}}', target='_blank')
-                  span.mi_bc_img
-                    img(src='{{img}}', alt='{{index}}')
-                  em {{index}}
-                  span.mi_bc_posi {{span}}
-              li
-                a(href='{{href}}', title='{{index}}', target='_blank')
-                  span.mi_bc_img
-                    img(src='{{img}}', alt='{{index}}')
-                  em {{index}}
-                  span.mi_bc_posi {{span}}
-        .matter_fr_boxthree
-          .mi_cn.clearfix
-            h3.mi_h3 jianshenwuqu
-            .more
-              a(href='http://www.696px.com/list/burnt/burnt.html', target='_blank', style='margin-right:10px;')
-                em.ko &#xE900;
-                | gengduo
-          .mi_cc
-            .mi_cc_ci
-              ul.mi_ulc
-                li
-                  i &#xE90A;
-                  a(href='{{href}}', target='_blank', title='{{index}}') {{index}}
+      include ../includes/center
+
 block botjs
-  script(src='js/list-e820af130b.js')
+  script(src='/js/list-e820af130b.js')

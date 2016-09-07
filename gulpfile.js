@@ -27,7 +27,7 @@ gulp.task('browser-sync', ['nodemon'], function(){
         files: ['public/**','views/**'],
         proxy: 'http://localhost:3000',
         port: 4000,
-        browser: ['/Applications/Google\ Chrome\ Canary.app/'],
+        browser: 'Chrome',
         notify: true,
     });
 });
