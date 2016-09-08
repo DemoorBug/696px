@@ -32,7 +32,6 @@ exports.categorySave = function(req,res) {
   }
   else{
     _category = new Category(categoryObj)
-    console.log('s')
     _category.save(function(err,category){
       if(err){
           console.log(err)

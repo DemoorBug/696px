@@ -68,9 +68,9 @@ block content
               .form-group
                 label.control-label.col-md-2 分类选择
                 .col-md-7
-                  each cat in category
+                  each cat in categories
                     label.radio-inline
-                      input(name='movie[category]', type='radio', value=cat.name)
+                      input(type="radio",name="movie[category]",value="#{cat._id}")
                       span #{cat.name}
               .form-group
                 label.control-label.col-md-2 文章内容

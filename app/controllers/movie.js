@@ -23,11 +23,11 @@ exports.tables = function(req,res) {
   })
 }
 exports.form = function(req,res) {
-  Category.fetch(function(err,category) {
+  Category.find({},function(err,categories){
     res.render('adminform',{
         title: '录入管理页',
         update: '新增内容',
-        category: category,
+        categories: categories,
         movie: {}
     })
   })
@@ -54,13 +54,17 @@ exports.save = function(req,res) {
   }
   else{
     _movie = new Movie(movieObj)
-
+    var categoryId = movieObj.category
     _movie.save(function(err,movie){
       if(err){
-          console.log(err)
-        }
-        return res.redirect('/admin')
-        // res.redirect('/movie/'+ movie._id)
+        console.log(err)
+      }
+    Category.findById(categoryId,function(err,category){
+              category.movies.push(movie._id)
+              category.save(function(err,category){
+                  return res.redirect('/admin')
+              })
+          })
     })
   }
 }

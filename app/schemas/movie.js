@@ -12,8 +12,8 @@ var MovieSchema = new Schema({
       default: 0
   },
   category: {
-    type:ObjectId,
-    rel: 'Category'
+      type: ObjectId,
+      rel: 'Category'
   },
   meta: {
     createdAt: {
