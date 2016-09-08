@@ -3,37 +3,25 @@ block nav
   .nav-collapse
     ul.nav
       li
-        a(href='index-2.html')
+        a(href='/admin')
           span.se7en-home(aria-hidden='true')
-          | Dashboard
+          | 内容列表
       li
-        a(href='social.html')
+        a(href='/admin/user')
           span.se7en-feed(aria-hidden='true')
-          | Social Feed
-      li.dropdown
-        a(data-toggle='dropdown', href='#')
-          span.se7en-star(aria-hidden='true')
-          | Features
-      li.dropdown
-        a.current(data-toggle='dropdown', href='#')
+          | 用户列表
+      li
+        a.current(href='/admin/form')
           span.se7en-forms(aria-hidden='true')
-          | Forms
-      li.dropdown
-        a(data-toggle='dropdown', href='#')
+          | 新增内容
+      li
+        a(href='/admin/category/list')
           span.se7en-tables(aria-hidden='true')
-          | Tables
+          | 分类列表
       li
-        a(href='charts.html')
+        a(href='/admin/category')
           span.se7en-charts(aria-hidden='true')
-          | Charts
-      li.dropdown
-        a(data-toggle='dropdown', href='#')
-          span.se7en-pages(aria-hidden='true')
-          | Pages
-      li
-        a(href='gallery.html')
-          span.se7en-gallery(aria-hidden='true')
-          | Gallery
+          | 分类添加
 
 block content
   .container-fluid.main-content
@@ -80,15 +68,10 @@ block content
               .form-group
                 label.control-label.col-md-2 分类选择
                 .col-md-7
-                  label.radio-inline
-                    input(name='optionsRadios2', type='radio', value='option1')
-                    span Option 1
-                  label.radio-inline
-                    input(checked='', name='optionsRadios2', type='radio', value='option2')
-                    span Option 2
-                  label.radio-inline
-                    input(name='optionsRadios2', type='radio', value='option3')
-                    span Option 3
+                  each cat in category
+                    label.radio-inline
+                      input(name='movie[category]', type='radio', value=cat.name)
+                      span #{cat.name}
               .form-group
                 label.control-label.col-md-2 文章内容
                 .col-md-7
@@ -96,5 +79,4 @@ block content
               .form-group
                 label.control-label.col-md-2 发布
                 .col-md-7
-                  button.btn.btn-default-outline 取消
                   button.btn.btn-primary(type='submit') 提交

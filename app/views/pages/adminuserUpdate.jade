@@ -1,0 +1,56 @@
+extends ../layoutadmin
+block nav
+  .nav-collapse
+    ul.nav
+      li
+        a(href='/admin')
+          span.se7en-home(aria-hidden='true')
+          | 内容列表
+      li
+        a.current(href='/admin/user')
+          span.se7en-feed(aria-hidden='true')
+          | 用户列表
+      li
+        a(href='/admin/form')
+          span.se7en-forms(aria-hidden='true')
+          | 新增内容
+      li
+        a(href='/admin/category/list')
+          span.se7en-tables(aria-hidden='true')
+          | 分类列表
+      li
+        a(href='/admin/category')
+          span.se7en-charts(aria-hidden='true')
+          | 分类添加
+
+block content
+  .container-fluid.main-content
+    .page-title
+      h1
+        | #{title}
+    .row
+      .col-lg-12
+        .widget-container.fluid-height.clearfix
+          .heading
+            i.icon-reorder
+            | #{update}
+          .widget-content.padded
+            form.form-horizontal(method="post",action="/admin/user/save")
+              if users._id
+                input(type="hidden",name="users[_id]",value=users._id)
+              .form-group
+                label.control-label.col-md-2 用户名
+                .col-md-7
+                  input.form-control(type='text',value=users.name,name='users[name]')
+              .form-group
+                label.control-label.col-md-2 修改密码
+                .col-md-7
+                  input.form-control(type='text',name='users[password]',placeholder='请输入新密码',)
+              .form-group
+                label.control-label.col-md-2 用户权限
+                .col-md-7
+                  input.form-control(type='text',placeholder='用户权限',value=users.role name="users[role]")
+              .form-group
+                label.control-label.col-md-2 发布
+                .col-md-7
+                  button.btn.btn-primary(type='submit') 提交

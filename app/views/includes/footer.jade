@@ -13,7 +13,7 @@
 .modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
   .modal-dialog.modal-sm-user
     #login
-      form.container.offset1.loginform(action='#', method='post')
+      form.container.offset1.loginform(action='/user/signin', method='post')
         #owl-login
           .hand
           .hand.hand-r
@@ -21,16 +21,16 @@
             .arm
             .arm.arm-r
         .pad
-          input(type='hidden', name='_csrf', value='9IAtUxV2CatyxHiK2LxzOsT6wtBE6h8BpzOmk=')
+          input(type='hidden', name='_csrf', value='')
           .control-group
             .controls
               label.control-label.fa.fa-envelope(for='email')
-              input#email.form-control.input-medium(type='text', name='email', placeholder='请输入登录用户名/邮箱', tabindex='1')
+              input#email.form-control.input-medium(type='text', name='user[name]', placeholder='请输入登录用户名/邮箱', tabindex='1')
           .control-group
             .controls
               label.control-label.fa.fa-asterisk(for='password')
-              input#password.form-control.input-medium(type='password', name='password', placeholder='6-16位密码，区分大小写，不能使用空格', tabindex='2')
+              input#password.form-control.input-medium(type='password', name='user[password]', placeholder='6-16位密码，区分大小写，不能使用空格', tabindex='2')
         .form-actions
           a.btn.pull-left.btn-link.text-muted(href='#', tabindex='5') 忘记密码?
-          a#text-muted.btn.btn-link.text-muted(href='#', tabindex='6') 注册
-          button.btn.btn-primary(type='submit', tabindex='4') 登录
+          a#text-muted.btn.btn-link.text-muted(href='#', tabindex='6',data-dismiss="modal") 关闭
+          button.btn.btn-success(type='submit', tabindex='4') 登录

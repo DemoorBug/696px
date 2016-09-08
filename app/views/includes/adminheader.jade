@@ -33,13 +33,14 @@ body
             li.dropdown.user.hidden-xs
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 img(width='34', height='34', src='/admin/images/avatar-male.jpg')
-                | &#x7528;&#x6237;&#x540D;
+                | #{user.name}
+
                 b.caret
               ul.dropdown-menu
                 li
-                  a(href='login1.html')
+                  a(href='/logouto')
                     i.icon-signout
-                    | Logout
+                    | 登出
         button.navbar-toggle
           span.icon-bar
           span.icon-bar

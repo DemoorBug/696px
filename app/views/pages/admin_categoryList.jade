@@ -3,7 +3,7 @@ block nav
   .nav-collapse
     ul.nav
       li
-        a.current(href='/admin')
+        a(href='/admin')
           span.se7en-home(aria-hidden='true')
           | 内容列表
       li
@@ -15,7 +15,7 @@ block nav
           span.se7en-forms(aria-hidden='true')
           | 新增内容
       li
-        a(href='/admin/category/list')
+        a.current(href='/admin/category/list')
           span.se7en-tables(aria-hidden='true')
           | 分类列表
       li
@@ -39,35 +39,20 @@ block content
             table#datatable-editables.table.table-bordered.table-striped
               thead
                 th
-                  | 文章标题
-                th.hidden-xs(width='10%')
-                  | 分类
-                th.hidden-xs(width='10%')
-                  | 来源
+                  | 用户名
                 th.hidden-xs(width='15%')
-                  | 录入时间
-                th.hidden-xs(width='10%')
-                  | Pv
-                th(width='60') 查看
-                th(width='60') 更新
+                  | 添加时间
+                th(width='60') 修改
                 th(width='75') 删除
               tbody
                 each item in movies
                   tr(class="item-id-#{item._id}")
                     td
-                      | #{item.title}
-                    td.hidden-xs
-                      | 分类
-                    td.hidden-xs
-                      | #{item.source}
+                      | #{item.name}
                     td.hidden-xs
                       | #{moment(item.meta.updateAt).format('YYYY/MM/DD HH:mm:ss')}
-                    td.hidden-xs
-                      | #{item.pv}
                     td
-                      a(target="_blank",href="/movie/#{item._id}") 查看
+                      a(target="_blank",href="/admin/category/update/#{item._id}") 修改
                     td
-                      a(target="_blank",href="/admin/update/#{item._id}") 修改
-                    td
-                      a.dal(href="javascript:;",data-id="#{item._id}") 删除
+                      a.dae(href="javascript:;",data-id="#{item._id}") 删除
   script(src="/js/admin.js")
