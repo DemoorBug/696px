@@ -18,34 +18,28 @@ block content
                 li
                   span #{moment(item.meta.updateAt).format('MM.DD')}
                   a(href='/movie/#{item._id}', target='_blank', title=item.title) #{item.title}
+            else
+              li
+                span(style="text-align:center;font-size:24px;display:block;float:none") 没有找到你想搜索的内容
           // Page换页
           .pageNum
-            if currentPage != 1
-              span
-                a(target='_self', href='/results?#{query}&p=#{currentPage-2}') &lt;
+            if movies && movies.length > 0
+              if currentPage != 1
+                span
+                  a(target='_self', href='/results?#{query}&p=#{currentPage-2}') &lt;
 
-            - for(var i = 0;i<totalpage; i++){
-              - if(currentPage == (i+1)){
-                  span#pageNN
-                    a(target='_self', href='javascript:;') #{currentPage}
-              - }else {
-                  span
-                    a(target='_self', href='/results?#{query}&p=#{i}') #{i + 1}
+              - for(var i = 0;i<totalpage; i++){
+                - if(currentPage == (i+1)){
+                    span#pageNN
+                      a(target='_self', href='javascript:;') #{currentPage}
+                - }else {
+                    span
+                      a(target='_self', href='/results?#{query}&p=#{i}') #{i + 1}
+                - }
               - }
-            - }
-            if currentPage != totalpage
-              span
-                a(target='_self', href='/results?#{query}&p=#{currentPage}') &gt;
-            //- span
-            //-   a(target='_self', href='#') &lt;
-            //- span#pageNN
-            //-   a(target='_self', href='#') 1
-            //- span
-            //-   a(target='_self', href='#p=2') 2
-            //- span
-            //-   | ...
-            //- span
-            //-   a(target='_self', href='#') 55
+              if currentPage != totalpage
+                span
+                  a(target='_self', href='/results?#{query}&p=#{currentPage}') &gt;
       include ../includes/center
 
 block botjs

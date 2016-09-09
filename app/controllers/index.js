@@ -3,17 +3,30 @@ var Category = require('../models/category')
 exports.index = function(req,res) {
   Category
     .find({})
-    .populate({path:'movies', options:{limit:5}})
-    .exec(function(err,category){
+    .populate({path:'movies'})
+    .exec(function(err,categories){
       if(err){
         console.log(err)
       }
-        var category = categories[0] || {}
-        var movies = category.movies || []
+      //最热文章
+      var resOne = categories[0].movies
+      var results = resOne.slice(resOne.length-4,resOne.length+4)
+      //首页焦点文字
+      var focus = categories[1].movies
+      var Indexfocus = focus.slice(focus.length-2,focus.length+2)
+      //焦点图
+      var restherr = categories[2].movies
+      if(restherr.length > 6) var imgEm = restherr.slice(restherr.length-3,restherr.length+3)
+      else var imgEm = restherr
+      //健身误区
+      // var restherr = categories[2].movies
+      // var imgEm = restherr.slice(restherr.length-3,restherr.length+3)
+
       res.render('index',{
           title: '健身吧_696px_中国专业健身网',
-          category = category,
-          movies: movies
+          category: categories,
+          resOne:results,
+          imgEm: imgEm
       })
 
     })

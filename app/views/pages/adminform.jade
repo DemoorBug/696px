@@ -35,7 +35,7 @@ block content
             i.icon-reorder
             | #{update}
           .widget-content.padded
-            form.form-horizontal(method="post",action="/admin/save")
+            form.form-horizontal(method="post",action="/admin/save",enctype="multipart/form-data")
               if movie._id
                 input(type="hidden",name="movie[_id]",value=movie._id)
               .form-group
@@ -63,9 +63,7 @@ block content
                       input(type="radio",name="movie[describe]",value="综合")
                       span 综合
                 script
-                  $(function(){
-                  $('#icon').find('[value= '+$('#ic').val()+']').attr('checked','checked')
-                  })
+                  |$(function(){$('#icon').find('[value= '+$('#ic').val()+']').attr('checked','checked')})
               .form-group
                 label.control-label.col-md-2 上传图片
                 .col-md-4
@@ -74,7 +72,7 @@ block content
                       span.btn.btn-default.btn-file
                         span.fileupload-new 选择图片
                         span.fileupload-exists 更换
-                        input(type='file',name="movie[poster]")
+                        input(type='file',name="uploadPoster")
                       span.fileupload-preview #{movie.poster}
                       button.close.fileupload-exists(data-dismiss='fileupload', style='float:none', type='button') &times;
                   else
@@ -82,7 +80,7 @@ block content
                       span.btn.btn-default.btn-file
                         span.fileupload-new 选择图片
                         span.fileupload-exists 更换
-                        input(type='file',name="movie[poster]")
+                        input(type='file',name="uploadPoster")
                       span.fileupload-preview #{movie.poster}
                       button.close.fileupload-exists(data-dismiss='fileupload', style='float:none', type='button') &times;
               .form-group

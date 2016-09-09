@@ -23,6 +23,9 @@ app.use(session({
   })
 }))
 // collection: 'sessions'  存储到mongodb里面的名称
+var multipart = require('connect-multiparty');
+app.use(multipart());
+
 
 var bodyParser = require('body-parser');  // 必须引入此插件 才能读取到post数据
 
@@ -31,6 +34,8 @@ app.set('view engine','jade')    //设置默认的模板引擎
 app.locals.moment = require('moment')    // 时间
 app.use(bodyParser.urlencoded({ extended: true })) //表单数据格式化
 app.listen(port)
+
+
 
 require('./config/routes')(app)
 //引入路由

@@ -3,6 +3,9 @@ var Movie = require('../models/movie')
 var User = require('../models/user')
 var Category = require('../models/category')
 
+var fs = require('fs')
+var path = require('path')
+
 exports.detail = function(req,res) {
   var id = req.params.id;
     Movie.findById(id,function(err,movie){
@@ -41,6 +44,9 @@ exports.save = function(req,res) {
   var id = req.body.movie._id
   var movieObj = req.body.movie
   var _movie
+  if(req.poster) {
+        movieObj.poster = req.poster
+    }
   if(id) {
     Movie.findById(id,function(err,movie){
       if (err) {
@@ -161,4 +167,26 @@ exports.des =  function(req,res){
         })
     }
 
+}
+
+exports.savePoster = function(req,res,next) {
+    var posterData = req.files.uploadPoster
+    console.log(req.files)
+    var filePath = posterData.path
+    var originalFilename = posterData.originalFilename
+    if (originalFilename) {
+        fs.readFile(filePath,function(err,data){
+            var timestamp = Date.now()
+            var type = posterData.type.split('/')[1]
+            var poster = timestamp + '.' + type
+            var newPath = path.join(__dirname,'../../','/public/upload/'+poster)
+            fs.writeFile(newPath,data,function(err){
+                req.poster = poster;
+                next()
+            })
+        })
+    }
+    else {
+        next()
+    }
 }

@@ -28,7 +28,7 @@ app.use(function(req,res,next){
   app.delete('/admin/user',User.signinRequired,User.adminRequired, Movie.des)
 // 存储
   app.post('/admin/user/save',User.signinRequired,User.adminRequired, Movie.userSave)
-  app.post('/admin/save',User.signinRequired,User.adminRequired, Movie.save)
+  app.post('/admin/save',User.signinRequired,User.adminRequired,Movie.savePoster ,Movie.save)
 // 更新
   app.get('/admin/update/:id',User.signinRequired,User.adminRequired, Movie.update)
 // 分类
