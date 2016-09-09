@@ -47,6 +47,26 @@ block content
                 .col-md-7
                   input.form-control(placeholder='文章来源', type='text',name="movie[source]",value=movie.source)
               .form-group
+                label.control-label.col-md-2 文章描述
+                input#ic(type="hidden",value='#{movie.describe}')
+                .col-md-7#icon
+                    label.radio-inline
+                      input(type="radio",name="movie[describe]",value="新闻",checked)
+                      span 新闻
+                    label.radio-inline
+                      input(type="radio",name="movie[describe]",value="娱乐")
+                      span 娱乐
+                    label.radio-inline
+                      input(type="radio",name="movie[describe]",value="公告")
+                      span 公告
+                    label.radio-inline
+                      input(type="radio",name="movie[describe]",value="综合")
+                      span 综合
+                script
+                  $(function(){
+                  $('#icon').find('[value= '+$('#ic').val()+']').attr('checked','checked')
+                  })
+              .form-group
                 label.control-label.col-md-2 上传图片
                 .col-md-4
                   if movie.poster
@@ -70,8 +90,12 @@ block content
                 .col-md-7
                   each cat in categories
                     label.radio-inline
-                      input(type="radio",name="movie[category]",value="#{cat._id}")
-                      span #{cat.name}
+                      if movie._id
+                        input(type="radio",name="movie[category]",value="#{cat._id}",checked=movie.category.toString()==cat._id.toString())
+                        span #{cat.name}
+                      else
+                        input(type="radio",name="movie[category]",value="#{cat._id}")
+                        span #{cat.name}
               .form-group
                 label.control-label.col-md-2 文章内容
                 .col-md-7

@@ -7,6 +7,7 @@ var MovieSchema = new Schema({
   source: String,
   summary: String,
   poster: String,
+  describe: String,
   pv: {
       type: Number,
       default: 0

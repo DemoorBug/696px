@@ -41,7 +41,7 @@ block content
                 th
                   | 文章标题
                 th.hidden-xs(width='10%')
-                  | 分类
+                  | 描述
                 th.hidden-xs(width='10%')
                   | 来源
                 th.hidden-xs(width='15%')
@@ -57,7 +57,7 @@ block content
                     td
                       | #{item.title}
                     td.hidden-xs
-                      | 分类
+                      | #{item.describe}
                     td.hidden-xs
                       | #{item.source}
                     td.hidden-xs
@@ -67,7 +67,7 @@ block content
                     td
                       a(target="_blank",href="/movie/#{item._id}") 查看
                     td
-                      a(target="_blank",href="/admin/update/#{item._id}") 修改
+                      a(href="/admin/update/#{item._id}") 修改
                     td
                       a.dal(href="javascript:;",data-id="#{item._id}") 删除
   script(src="/js/admin.js")

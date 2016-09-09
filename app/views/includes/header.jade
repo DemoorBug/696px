@@ -44,7 +44,10 @@ nav.navbar.navbar-inverse
             a.log-in(href='javascript:;', data-toggle='modal', data-target='.bs-example-modal-lg') 登录
           li
             a.log-up(href='javascript:;', data-toggle='modal', data-target='.bs-example-modal-lg') 注册
-      form#navbar_form.navbar-form.navbar-right.clearfix.hidden-sm(role='search')
+      form#navbar_form.navbar-form.navbar-right.clearfix.hidden-sm(role='search',method='get', action='/results')
         .form-group.pull-left
-          input.form_control(type='text', placeholder='请输入想搜索的内容...')
+          if keyword
+            input.form_control(type='text', placeholder='#{keyword}',name='search')
+          else
+            input.form_control(type='text', placeholder='请输入想搜索的内容...',name='search')
         button.btn_default.pull-left(type='submit') &#xE90F;

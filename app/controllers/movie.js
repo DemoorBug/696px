@@ -5,10 +5,13 @@ var Category = require('../models/category')
 
 exports.detail = function(req,res) {
   var id = req.params.id;
-  Movie.findById(id,function(err,movie){
-    res.render('ner',{
-        title: movie.title,
-        movie: movie
+    Movie.findById(id,function(err,movie){
+  Category.findById(movie.category,function(err,category){
+      res.render('ner',{
+          title: movie.title,
+          category: category,
+          movie: movie
+      })
     })
   })
 }
@@ -55,17 +58,22 @@ exports.save = function(req,res) {
   else{
     _movie = new Movie(movieObj)
     var categoryId = movieObj.category
-    _movie.save(function(err,movie){
-      if(err){
-        console.log(err)
+      if (categoryId) {
+      _movie.save(function(err,movie){
+        if(err){
+          console.log(err)
+        }
+      Category.findById(categoryId,function(err,category){
+                category.movies.push(movie._id)
+                category.save(function(err,category){
+                    return res.redirect('/admin')
+                })
+            })
+      })
       }
-    Category.findById(categoryId,function(err,category){
-              category.movies.push(movie._id)
-              category.save(function(err,category){
-                  return res.redirect('/admin')
-              })
-          })
-    })
+      else {
+        return res.redirect('/admin/form')
+      }
   }
 }
 
@@ -77,7 +85,7 @@ exports.update = function(req,res){
         res.render('adminform',{
           title: '内容更新',
           update: '更新',
-          category: category,
+          categories : category,
           movie: movie
         })
       })

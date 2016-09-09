@@ -42,4 +42,6 @@ app.use(function(req,res,next){
   app.get('/admin/category/list',User.signinRequired,User.adminRequired, Category.list)
   app.get('/admin/category/update/:id',User.signinRequired,User.adminRequired, Category.userUpdate)
   app.delete('/admin/category',User.signinRequired,User.adminRequired, Category.dae)
+//
+ app.get('/results',Index.search)
 }

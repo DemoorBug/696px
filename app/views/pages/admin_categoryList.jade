@@ -52,7 +52,7 @@ block content
                     td.hidden-xs
                       | #{moment(item.meta.updateAt).format('YYYY/MM/DD HH:mm:ss')}
                     td
-                      a(target="_blank",href="/admin/category/update/#{item._id}") 修改
+                      a(href="/admin/category/update/#{item._id}") 修改
                     td
                       a.dae(href="javascript:;",data-id="#{item._id}") 删除
   script(src="/js/admin.js")
