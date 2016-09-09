@@ -33,9 +33,9 @@ block content
               - for (var i=8;i > resOne.length;i--)
                 li
                   span.box_2
-                    a.box_img(href='list/warm/1511/w15112.html', target='_blank')
+                    a.box_img(href='/movie/#{resOne[i-5]._id}', target='_blank')
                       img(src='img/4.jpg')
-                  a(href='list/warm/1511/w15112.html', target='_blank')
+                  a(href='/movie/#{resOne[i-5]._id}', target='_blank')
                     //- | #{i-4}
                     span.box #{resOne[i-5].title}
                   span.box_1 26
