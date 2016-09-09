@@ -12,15 +12,21 @@ block content
               li(data-target='#carousel-example-generic', data-slide-to='1')
               li(data-target='#carousel-example-generic', data-slide-to='2')
             .carousel-inner.carousel_inner(role='listbox')
-              -for (var i=6; i>imgEm.length; i--)
-                -if(i==6)
+              -for (var i = imgEm.length-1; i >= 0; i--)
+                -if(i==imgEm.length-1)
                   .item.active
-                    a(href='/movie/#{imgEm[i-4]._id}')
-                      img(src='/upload/#{imgEm[i-4].poster}', alt='#{imgEm[i-4].title}',style="width:100%;height:270px ")
+                    a(href='/movie/#{imgEm[i]._id}')
+                      -if(imgEm[i].poster)
+                        img(src='/upload/#{imgEm[i].poster}', alt='#{imgEm[i].title}',style="width:100%;height:270px ")
+                      -else
+                        img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg', alt='#{imgEm[i].title}',style="width:100%;height:270px ")
                 -else
                   .item
-                    a(href='/movie/#{imgEm[i-4]._id}')
-                      img(src='/upload/#{imgEm[i-4].poster}', alt='#{imgEm[i-4].title}',style="width:100%;height:270px ")
+                    a(href='/movie/#{imgEm[i]._id}')
+                      -if(imgEm[i].poster)
+                        img(src='/upload/#{imgEm[i].poster}', alt='#{imgEm[i].title}',style="width:100%;height:270px ")
+                      -else
+                        img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg', alt='#{imgEm[i].title}',style="width:100%;height:270px ")
         .main_left_two
           .main_box_s.clearfix
             h3 #{category[0].name}
@@ -30,14 +36,17 @@ block content
                 |更多
           .main_box_x
             ul.main_box_xx
-              - for (var i=8;i > resOne.length;i--)
+              -for (var i = resOne.length-1; i >= 0; i--)
                 li
                   span.box_2
-                    a.box_img(href='/movie/#{resOne[i-5]._id}', target='_blank')
-                      img(src='img/4.jpg')
-                  a(href='/movie/#{resOne[i-5]._id}', target='_blank')
+                    a.box_img(href='/movie/#{resOne[i]._id}', target='_blank')
+                      -if(resOne[i].poster)
+                        img(src='/upload/#{resOne[i]._id}')
+                      -else
+                        img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
+                  a(href='/movie/#{resOne[i]._id}', target='_blank')
                     //- | #{i-4}
-                    span.box #{resOne[i-5].title}
+                    span.box #{resOne[i].title}
                   span.box_1 26
       .col-xs-12.col-sm-6.col-md-6.col-lg-5.Top
         .pAdding
@@ -62,69 +71,18 @@ block content
             #notice-con.notice-con
               .mod(style='display:block ;')
                 ul
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.25
-                    a(href='list/error/1511/e1511.html', title='北马心脏骤停者获救 六类人不适合跑马', target='_blank') &#x5317;&#x9A6C;&#x5FC3;&#x810F;&#x9AA4;&#x505C;&#x8005;&#x83B7;&#x6551; &#x516D;&#x7C7B;&#x4EBA;&#x4E0D;&#x9002;&#x5408;&#x8DD1;&#x9A6C;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 11.26
-                    a.co(href='list/error/1511/e15113.html', title='健身别踩五大误区', target='_blank') &#x5065;&#x8EAB;&#x522B;&#x8E29;&#x4E94;&#x5927;&#x8BEF;&#x533A;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='list/error/1511/e15112.html', title='运动不见瘦？可能犯了3个错', target='_blank') &#x8FD0;&#x52A8;&#x4E0D;&#x89C1;&#x7626;&#xFF1F;&#x53EF;&#x80FD;&#x72AF;&#x4E86;3&#x4E2A;&#x9519;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='list/error/1511/e15111.html', title='啤酒肚?原来这么多年我们都错怪了啤酒', target='_blank') &#x5564;&#x9152;&#x809A;?&#x539F;&#x6765;&#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#34d7c3') &#x54A8;&#x8BE2;
-                    span 12.2
-                    a(href='list/error/1511/e15114.html', title='健身的五大错误观念', target='_blank') &#x5065;&#x8EAB;&#x7684;&#x4E94;&#x5927;&#x9519;&#x8BEF;&#x89C2;&#x5FF5;
-                ul
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 12.2
-                    a(href='list/error/1511/e15115.html', title='跑步减肥大家要注意三点', target='_blank') &#x8DD1;&#x6B65;&#x51CF;&#x80A5;&#x5927;&#x5BB6;&#x8981;&#x6CE8;&#x610F;&#x4E09;&#x70B9;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='list/404/404.html', title='HIIT!时下正健身法', target='_blank') HIIT!&#x65F6;&#x4E0B;&#x6B63;&#x5065;&#x8EAB;&#x6CD5;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='list/404/404.html', title='这么多年我们都错怪了啤酒', target='_blank') &#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='list/404/404.html', title='游泳抽筋怎么破', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  li
-                    i(style='background:#34d7c3') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='list/404/404.html', title='运动有个金字塔 你在第几层', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                ul
-                  li
-                    i(style='background:#34d7c3') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='list/404/404.html', title='马拉松不是人人都能跑', target='_blank') &#x9A6C;&#x62C9;&#x677E;&#x4E0D;&#x662F;&#x4EBA;&#x4EBA;&#x90FD;&#x80FD;&#x8DD1;
-                  li
-                    i(style='background:#34d7c3') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='list/404/404.html', title='HIIT!时下正健身法', target='_blank') HIIT!&#x65F6;&#x4E0B;&#x6B63;&#x5065;&#x8EAB;&#x6CD5;
-                  li
-                    i(style='background:#34d7c3') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='list/404/404.html', title='这么多年我们都错怪了啤酒', target='_blank') &#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#34d7c3') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='list/404/404.html', title='游泳抽筋怎么破', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  li
-                    i(style='background:#34d7c3') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='list/404/404.html', title='运动有个金字塔 你在第几层', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                a.notice-con_one(href='list/error/error.html', target='_blank') &#x66F4;&#x591A;
+                  -for(var i = jswq.length-1; i >= 0; i--)
+                    li
+                      i(style='background:#999') #{jswq[i].describe}
+                      span #{moment(jswq[i].meta.updateAt).format('MM-DD')}
+                      a(href='/movie/#{jswq[i]._id}', title='#{jswq[i].title}', target='_blank') #{jswq[i].title}
+                    -if(i==15)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                    -if(i==10)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                    -if(i==5)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                a.notice-con_one(href='/results?cat=#{category[3]._id}&p=0', target='_blank') &#x66F4;&#x591A;
               .mod
                 ul
                   li

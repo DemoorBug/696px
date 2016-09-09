@@ -52,22 +52,22 @@ block content
                 th(width='60') 更新
                 th(width='75') 删除
               tbody
-                each item in movies
-                  tr(class="item-id-#{item._id}")
+                -for (var i = movies.length-1; i >= 0; i--)
+                  tr(class="item-id-#{movies[i]._id}")
                     td
-                      | #{item.title}
+                      | #{movies[i].title}
                     td.hidden-xs
-                      | #{item.describe}
+                      | #{movies[i].describe}
                     td.hidden-xs
-                      | #{item.source}
+                      | #{movies[i].source}
                     td.hidden-xs
-                      | #{moment(item.meta.updateAt).format('YYYY/MM/DD HH:mm:ss')}
+                      | #{moment(movies[i].meta.updateAt).format('YYYY/MM/DD HH:mm:ss')}
                     td.hidden-xs
-                      | #{item.pv}
+                      | #{movies[i].pv}
                     td
-                      a(target="_blank",href="/movie/#{item._id}") 查看
+                      a(target="_blank",href="/movie/#{movies[i]._id}") 查看
                     td
-                      a(href="/admin/update/#{item._id}") 修改
+                      a(href="/admin/update/#{movies[i]._id}") 修改
                     td
-                      a.dal(href="javascript:;",data-id="#{item._id}") 删除
+                      a.dal(href="javascript:;",data-id="#{movies[i]._id}") 删除
   script(src="/js/admin.js")

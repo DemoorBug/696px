@@ -14,10 +14,10 @@ block content
             b #{keyword}
           ul.mod_u
             if movies && movies.length > 0
-              each item in movies
+              -for (var i = movies.length-1; i >= 0; i--)
                 li
-                  span #{moment(item.meta.updateAt).format('MM.DD')}
-                  a(href='/movie/#{item._id}', target='_blank', title=item.title) #{item.title}
+                  span #{moment(movies[i].meta.updateAt).format('MM.DD')}
+                  a(href='/movie/#{movies[i]._id}', target='_blank', title=movies[i].title) #{movies[i].title}
             else
               li
                 span(style="text-align:center;font-size:24px;display:block;float:none") 没有找到你想搜索的内容

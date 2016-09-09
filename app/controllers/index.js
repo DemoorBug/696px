@@ -16,17 +16,16 @@ exports.index = function(req,res) {
       var Indexfocus = focus.slice(focus.length-2,focus.length+2)
       //焦点图
       var restherr = categories[2].movies
-      if(restherr.length > 6) var imgEm = restherr.slice(restherr.length-3,restherr.length+3)
-      else var imgEm = restherr
-      //健身误区
-      // var restherr = categories[2].movies
-      // var imgEm = restherr.slice(restherr.length-3,restherr.length+3)
-
+      var imgEm = restherr.slice(restherr.length-3,restherr.length+3)
+      // 健身误区
+      var onstherr = categories[3].movies
+      var jswq = onstherr.slice(onstherr.length-15,onstherr.length+15)
       res.render('index',{
           title: '健身吧_696px_中国专业健身网',
           category: categories,
           resOne:results,
-          imgEm: imgEm
+          imgEm: imgEm,
+          jswq: jswq
       })
 
     })
