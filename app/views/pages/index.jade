@@ -46,8 +46,8 @@ block content
                         img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
                   a(href='/movie/#{resOne[i]._id}', target='_blank')
                     //- | #{i-4}
-                    span.box #{resOne[i].title}
-                  span.box_1 26
+                    span.box #{resOne[i].summary.replace(/<p>/gi,'').substring(0,30)}…
+                  span.box_1 #{resOne[i].pv}
       .col-xs-12.col-sm-6.col-md-6.col-lg-5.Top
         .pAdding
           .main_midde_one
@@ -64,7 +64,7 @@ block content
           .main_midde_two
             #notice-tit.notice-tit
               ul.clearfix
-                li.select &#x5065;&#x8EAB;&#x8BEF;&#x533A;
+                li.select #{category[3].name}
                 li &#x751F;&#x6D3B;&#x767E;&#x79D1;
                 li &#x8FD0;&#x52A8;&#x635F;&#x4F24;
                 li(style='border-right: 0;') &#x6700;&#x65B0;&#x5173;&#x6CE8;
@@ -73,7 +73,17 @@ block content
                 ul
                   -for(var i = jswq.length-1; i >= 0; i--)
                     li
-                      i(style='background:#999') #{jswq[i].describe}
+                      case jswq[i].describe
+                        when '新闻'
+                          i(style='background:#34c4d7') #{jswq[i].describe}
+                        when '娱乐'
+                          i(style='background:#999') #{jswq[i].describe}
+                        when '公告'
+                          i(style='background:#ff5c50') #{jswq[i].describe}
+                        when '综合'
+                          i(style='background:#34d7c3') #{jswq[i].describe}
+                        default
+                          i(style='background:#999') #{jswq[i].describe}
                       span #{moment(jswq[i].meta.updateAt).format('MM-DD')}
                       a(href='/movie/#{jswq[i]._id}', title='#{jswq[i].title}', target='_blank') #{jswq[i].title}
                     -if(i==15)
