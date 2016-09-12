@@ -6,27 +6,27 @@ nav.navbar.navbar-inverse
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='http://www.696px.com')
+      a.navbar-brand(href='/')
         img(alt='696Px健身吧_中国专业健身网', src='/img/logo.png')
     #bs-example-navbar-collapse-1.collapse.navbar-collapse.navbar_collapse
       ul.nav.navbar-nav.navbar_nav
         li
-          a(href='http://www.696px.com/list/hour/hour.html')
+          a(href='/results?cat=#{categorys[9]._id}&p=0')
             em &#xE903;
-            | 时刻健身
+            | #{categorys[9].name}
             span.sr-only (current)
         li
-          a(href='http://www.696px.com/list/fashion/fashion.html')
+          a(href='/results?cat=#{categorys[10]._id}&p=0')
             em &#xE90C;
-            | 时尚健身
+            | #{categorys[10].name}
         li
-          a(href='http://www.696px.com/list/room/room.html')
+          a(href='/results?cat=#{categorys[11]._id}&p=0')
             em &#xE909;
-            | 健身房
+            | #{categorys[11].name}
         li
-          a(href='http://www.696px.com/list/diet/diet.html')
+          a(href='/results?cat=#{categorys[12]._id}&p=0')
             em &#xE904;
-            | 饮食健康
+            | #{categorys[12].name}
       ul.nav.navbar-nav.navbar-right
         if user
           li

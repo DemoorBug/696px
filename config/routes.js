@@ -3,7 +3,7 @@ var Movie = require('../app/controllers/movie')
 var User = require('../app/controllers/user')
 var Category = require('../app/controllers/category')
 
-
+var Categoes = require('../app/models/category')
 
 module.exports = function(app) {
 
@@ -11,6 +11,32 @@ app.use(function(req,res,next){
     var _user = req.session.user
     app.locals.user = _user;
     return next()
+})
+app.use(function(req,res,next){
+    Categoes
+      .find({})
+      .populate({path:'movies'})
+      .exec(function(err,category){
+        if(err){
+          console.log(err)
+        }
+        // 新闻热词榜
+        var twscc = category[13].movies
+        var xwrcb = twscc.slice(twscc.length-6,twscc.length+6)
+        // 热点焦距
+        var wcscc = category[14].movies
+        var rdjj = wcscc.slice(wcscc.length-4,wcscc.length+4)
+        // 健身误区
+        var asscc = category[12].movies
+        var jswqq = asscc.slice(asscc.length-4,asscc.length+4)
+
+        app.locals.xwrcb = xwrcb
+        app.locals.rdjj = rdjj
+        app.locals.jswqq = jswqq
+        app.locals.categorys = category
+
+        return next()
+      })
 })
 
 // Index

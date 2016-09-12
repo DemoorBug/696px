@@ -41,7 +41,7 @@ block content
                   span.box_2
                     a.box_img(href='/movie/#{resOne[i]._id}', target='_blank')
                       -if(resOne[i].poster)
-                        img(src='/upload/#{resOne[i]._id}')
+                        img(src='/upload/#{resOne[i].poster}')
                       -else
                         img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
                   a(href='/movie/#{resOne[i]._id}', target='_blank')
@@ -52,22 +52,22 @@ block content
         .pAdding
           .main_midde_one
             .main_toppic
-              a.lrge(href='http://www.696px.com/list/fashion/1511/f15111.html', title='运动后要做的4件事 你必须要知道') &#x8FD0;&#x52A8;&#x540E;&#x8981;&#x505A;&#x7684;4&#x4EF6;&#x4E8B; &#x4F60;&#x5FC5;&#x987B;&#x8981;&#x77E5;&#x9053;
+              a.lrge(href='/movie/#{Indexfocus[5]._id}', title='#{Indexfocus[5].title}') #{Indexfocus[5].title};
               .toppic
-                a(href='http://www.696px.com/list/hour/1511/h15111.html', style='color:red', target='_blank') [&#x4E45;&#x5750;1&#x5C0F;&#x65F6;=&#x5438;&#x4E00;&#x76D2;&#x9999;&#x70DF; 6&#x62DB;&#x6559;&#x4F60;&#x529E;&#x516C;&#x5BA4;&#x52A8;&#x8D77;&#x6765;]
-                a(href='http://www.696px.com/list/hour/1511/h1511.html', target='_blank') [&#x7761;&#x524D;&#x5341;&#x5206;&#x949F;&#x745C;&#x4F3D; ...]
+                a(href='/movie/#{Indexfocus[5]._id}', style='color:red', target='_blank') [#{Indexfocus[3].title}]
+                a(href='/movie/#{Indexfocus[5]._id}', target='_blank') [#{Indexfocus[2].title}]
             .main_toppic
-              a.lrge(href='http://www.696px.com/list/word/1511/w1511/nr.html', title='丰胸翘臀+马甲线 娱乐红星PK民间女神抢头条') &#x4E30;&#x80F8;&#x7FD8;&#x81C0;+&#x9A6C;&#x7532;&#x7EBF; &#x5A31;&#x4E50;&#x7EA2;&#x661F;PK&#x6C11;&#x95F4;&#x5973;&#x795E;&#x62A2;&#x5934;&#x6761;
+              a.lrge(href='/movie/#{Indexfocus[5]._id}', title='#{Indexfocus[5].title}') #{Indexfocus[4].title}
               .toppic
-                a(href='http://www.696px.com/list/hour/1511/f15112.html', target='_blank') [&#x522B;&#x8BA9;&#x8FD9;&#x4E9B;&#x539F;&#x56E0;&#x6BC1;&#x4E86;&#x4F60;&#x7684;&#x51CF;&#x80A5;&#x8BA1;&#x5212;]
-                a(href='http://www.696px.com/list/fashion/1511/f15112.html', target='_blank') [&#x5168;&#x8EAB;&#x5851;&#x578B;&#x745C;&#x4F3D;&#x5BF9;&#x4EBA;&#x4F53;&#x7684;&#x8EAB;&#x5FC3;&#x5065;&#x5EB7;&#x6709;&#x5F88;&#x597D;&#x7684;&#x4FC3;&#x8FDB;&#x4F5C;&#x7528;]
+                a(href='/movie/#{Indexfocus[5]._id}', target='_blank') [#{Indexfocus[1].title}]
+                a(href='/movie/#{Indexfocus[5]._id}', target='_blank') [#{Indexfocus[0].title}]
           .main_midde_two
             #notice-tit.notice-tit
               ul.clearfix
                 li.select #{category[3].name}
-                li &#x751F;&#x6D3B;&#x767E;&#x79D1;
-                li &#x8FD0;&#x52A8;&#x635F;&#x4F24;
-                li(style='border-right: 0;') &#x6700;&#x65B0;&#x5173;&#x6CE8;
+                li #{category[4].name}
+                li #{category[5].name}
+                li(style='border-right: 0;') #{category[6].name}
             #notice-con.notice-con
               .mod(style='display:block ;')
                 ul
@@ -95,400 +95,177 @@ block content
                 a.notice-con_one(href='/results?cat=#{category[3]._id}&p=0', target='_blank') &#x66F4;&#x591A;
               .mod
                 ul
-                  li
-                    i(style='background:#34d7c3') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='http://www.696px.com/list/life/1511/l1511.html', title='出行健身两不误 直立自行车成流行新趋势', target='_blank') &#x51FA;&#x884C;&#x5065;&#x8EAB;&#x4E24;&#x4E0D;&#x8BEF; &#x76F4;&#x7ACB;&#x81EA;&#x884C;&#x8F66;&#x6210;&#x6D41;&#x884C;&#x65B0;&#x8D8B;&#x52BF;
-                  li
-                    i(style='background:#34d7c3') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='http://www.696px.com/list/life/1511/l15112.html', title='别忘了！跑完步后要做静态拉伸才不会肌肉堆积', target='_blank') &#x522B;&#x5FD8;&#x4E86;&#xFF01;&#x8DD1;&#x5B8C;&#x6B65;&#x540E;&#x8981;&#x505A;&#x9759;&#x6001;&#x62C9;&#x4F38;&#x624D;&#x4E0D;&#x4F1A;&#x808C;&#x8089;&#x5806;&#x79EF;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='http://www.696px.com/list/life/1511/l15113.html', title='中断运动两星期会怎样？变胖、贪吃...', target='_blank') &#x4E2D;&#x65AD;&#x8FD0;&#x52A8;&#x4E24;&#x661F;&#x671F;&#x4F1A;&#x600E;&#x6837;&#xFF1F;&#x53D8;&#x80D6;&#x3001;&#x8D2A;&#x5403;...
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='http://www.696px.com/list/life/1511/l15114.html', title='瘦子到底该如何增肌 ?专业教练给你解答！', target='_blank') &#x7626;&#x5B50;&#x5230;&#x5E95;&#x8BE5;&#x5982;&#x4F55;&#x589E;&#x808C; ?&#x4E13;&#x4E1A;&#x6559;&#x7EC3;&#x7ED9;&#x4F60;&#x89E3;&#x7B54;&#xFF01;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='http://www.696px.com/list/life/1511/l15115.html', title='反手摸到肚脐身材好 教你减肥小秘诀', target='_blank') &#x53CD;&#x624B;&#x6478;&#x5230;&#x809A;&#x8110;&#x8EAB;&#x6750;&#x597D; &#x6559;&#x4F60;&#x51CF;&#x80A5;&#x5C0F;&#x79D8;&#x8BC0;
-                ul
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='http://www.696px.com/list/life/1511/l15116/l15116_1.html', title='学的变瘦指南：送给需要的人', target='_blank') &#x5B66;&#x7684;&#x53D8;&#x7626;&#x6307;&#x5357;&#xFF1A;&#x9001;&#x7ED9;&#x9700;&#x8981;&#x7684;&#x4EBA;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='http://www.696px.com/list/life/1511/l15116/l15116_1.html', title='体温低也会让腿变粗！要瘦腿先明白5件事', target='_blank') &#x4F53;&#x6E29;&#x4F4E;&#x4E5F;&#x4F1A;&#x8BA9;&#x817F;&#x53D8;&#x7C97;&#xFF01;&#x8981;&#x7626;&#x817F;&#x5148;&#x660E;&#x767D;5&#x4EF6;&#x4E8B;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.26
-                    a(href='http://www.696px.com/list/life/1511/l151162/l151162_1.html', title='如果你有胖朋友，你变胖的几率增加57%', target='_blank') &#x5982;&#x679C;&#x4F60;&#x6709;&#x80D6;&#x670B;&#x53CB;&#xFF0C;&#x4F60;&#x53D8;&#x80D6;&#x7684;&#x51E0;&#x7387;&#x589E;&#x52A0;57%
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 11.27
-                    a(href='http://www.696px.com/list/life/1511/l151163/l151163_1.html', title='运动出汗　都有哪些好处', target='_blank') &#x8FD0;&#x52A8;&#x51FA;&#x6C57;&#x3000;&#x90FD;&#x6709;&#x54EA;&#x4E9B;&#x597D;&#x5904;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 12.07
-                    a(href='http://www.696px.com/list/life/1511/l151164/l151164_1.html', title='上身肥胖人群减肥计划', target='_blank') &#x4E0A;&#x8EAB;&#x80A5;&#x80D6;&#x4EBA;&#x7FA4;&#x51CF;&#x80A5;&#x8BA1;&#x5212;
-                ul
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 12.08
-                    a(href='http://www.696px.com/list/life/1511/l151165/l151165_1.html', title='10个坚持跑步的理由', target='_blank') 10&#x4E2A;&#x575A;&#x6301;&#x8DD1;&#x6B65;&#x7684;&#x7406;&#x7531;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 12.14
-                    a(href='http://www.696px.com/list/life/1511/l151166/l151166_1.html', title='洗个温水澡、闻芳香精油 8件事赶跑起床气', target='_blank') &#x6D17;&#x4E2A;&#x6E29;&#x6C34;&#x6FA1;&#x3001;&#x95FB;&#x82B3;&#x9999;&#x7CBE;&#x6CB9; 8&#x4EF6;&#x4E8B;&#x8D76;&#x8DD1;&#x8D77;&#x5E8A;&#x6C14;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='这么多年我们都错怪了啤酒', target='_blank') &#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='游泳抽筋怎么破', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='运动有个金字塔 你在第几层', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                a.notice-con_one(href='http://www.696px.com/list/life/life.html', target='_blank') &#x66F4;&#x591A;
+                  -for(var i = shbk.length-1; i >= 0; i--)
+                    li
+                      case shbk[i].describe
+                        when '新闻'
+                          i(style='background:#34c4d7') #{shbk[i].describe}
+                        when '娱乐'
+                          i(style='background:#999') #{shbk[i].describe}
+                        when '公告'
+                          i(style='background:#ff5c50') #{shbk[i].describe}
+                        when '综合'
+                          i(style='background:#34d7c3') #{shbk[i].describe}
+                        default
+                          i(style='background:#999') #{shbk[i].describe}
+                      span #{moment(shbk[i].meta.updateAt).format('MM-DD')}
+                      a(href='/movie/#{shbk[i]._id}', title='#{shbk[i].title}', target='_blank') #{shbk[i].title}
+                    -if(i==15)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                    -if(i==10)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                    -if(i==5)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                a.notice-con_one(href='/results?cat=#{category[4]._id}&p=0', target='_blank') &#x66F4;&#x591A;
               .mod
                 ul
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='马拉松不是人人都能跑', target='_blank') &#x9A6C;&#x62C9;&#x677E;&#x4E0D;&#x662F;&#x4EBA;&#x4EBA;&#x90FD;&#x80FD;&#x8DD1;3
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='HIIT!时下正健身法', target='_blank') HIIT!&#x65F6;&#x4E0B;&#x6B63;&#x5065;&#x8EAB;&#x6CD5;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='这么多年我们都错怪了啤酒', target='_blank') &#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='游泳抽筋怎么破', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='运动有个金字塔 你在第几层', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                ul
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='马拉松不是人人都能跑', target='_blank') &#x9A6C;&#x62C9;&#x677E;&#x4E0D;&#x662F;&#x4EBA;&#x4EBA;&#x90FD;&#x80FD;&#x8DD1;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='HIIT!时下正健身法', target='_blank') HIIT!&#x65F6;&#x4E0B;&#x6B63;&#x5065;&#x8EAB;&#x6CD5;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='这么多年我们都错怪了啤酒', target='_blank') &#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='游泳抽筋怎么破', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='运动有个金字塔 你在第几层', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                ul
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='马拉松不是人人都能跑', target='_blank') &#x9A6C;&#x62C9;&#x677E;&#x4E0D;&#x662F;&#x4EBA;&#x4EBA;&#x90FD;&#x80FD;&#x8DD1;
-                  li
-                    i(style='background:#34c4d7') &#x6709;&#x6C27;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='HIIT!时下正健身法', target='_blank') HIIT!&#x65F6;&#x4E0B;&#x6B63;&#x5065;&#x8EAB;&#x6CD5;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='这么多年我们都错怪了啤酒', target='_blank') &#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='游泳抽筋怎么破', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='运动有个金字塔 你在第几层', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                a.notice-con_one(href='http://www.696px.com/list/damage/damage.html', target='_blank') &#x66F4;&#x591A;
+                  -for(var i = ydss.length-1; i >= 0; i--)
+                    li
+                      case ydss[i].describe
+                        when '新闻'
+                          i(style='background:#34c4d7') #{ydss[i].describe}
+                        when '娱乐'
+                          i(style='background:#999') #{ydss[i].describe}
+                        when '公告'
+                          i(style='background:#ff5c50') #{ydss[i].describe}
+                        when '综合'
+                          i(style='background:#34d7c3') #{ydss[i].describe}
+                        default
+                          i(style='background:#999') #{ydss[i].describe}
+                      span #{moment(ydss[i].meta.updateAt).format('MM-DD')}
+                      a(href='/movie/#{ydss[i]._id}', title='#{ydss[i].title}', target='_blank') #{ydss[i].title}
+                    -if(i==15)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                    -if(i==10)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                    -if(i==5)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                a.notice-con_one(href='/results?cat=#{category[5]._id}&p=0', target='_blank') &#x66F4;&#x591A;
               .mod
                 ul
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='马拉松不是人人都能跑', target='_blank') &#x9A6C;&#x62C9;&#x677E;&#x4E0D;&#x662F;&#x4EBA;&#x4EBA;&#x90FD;&#x80FD;&#x8DD1;4
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='HIIT!时下正健身法', target='_blank') HIIT!&#x65F6;&#x4E0B;&#x6B63;&#x5065;&#x8EAB;&#x6CD5;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='这么多年我们都错怪了啤酒', target='_blank') &#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='游泳抽筋怎么破', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='运动有个金字塔 你在第几层', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                ul
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='马拉松不是人人都能跑', target='_blank') &#x9A6C;&#x62C9;&#x677E;&#x4E0D;&#x662F;&#x4EBA;&#x4EBA;&#x90FD;&#x80FD;&#x8DD1;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='HIIT!时下正健身法', target='_blank') HIIT!&#x65F6;&#x4E0B;&#x6B63;&#x5065;&#x8EAB;&#x6CD5;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='这么多年我们都错怪了啤酒', target='_blank') &#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='游泳抽筋怎么破', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='运动有个金字塔 你在第几层', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                ul
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='马拉松不是人人都能跑', target='_blank') &#x9A6C;&#x62C9;&#x677E;&#x4E0D;&#x662F;&#x4EBA;&#x4EBA;&#x90FD;&#x80FD;&#x8DD1;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='HIIT!时下正健身法', target='_blank') HIIT!&#x65F6;&#x4E0B;&#x6B63;&#x5065;&#x8EAB;&#x6CD5;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='这么多年我们都错怪了啤酒', target='_blank') &#x8FD9;&#x4E48;&#x591A;&#x5E74;&#x6211;&#x4EEC;&#x90FD;&#x9519;&#x602A;&#x4E86;&#x5564;&#x9152;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='游泳抽筋怎么破', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  li
-                    i(style='background:#999') &#x54A8;&#x8BE2;
-                    span 10.20
-                    a(href='http://www.696px.com/list/404/404.html', title='运动有个金字塔 你在第几层', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                a.notice-con_one(href='http://www.696px.com/list/attention/attention.html', target='_blank') &#x66F4;&#x591A;
+                  -for(var i = zxgz.length-1; i >= 0; i--)
+                    li
+                      case zxgz[i].describe
+                        when '新闻'
+                          i(style='background:#34c4d7') #{zxgz[i].describe}
+                        when '娱乐'
+                          i(style='background:#999') #{zxgz[i].describe}
+                        when '公告'
+                          i(style='background:#ff5c50') #{zxgz[i].describe}
+                        when '综合'
+                          i(style='background:#34d7c3') #{zxgz[i].describe}
+                        default
+                          i(style='background:#999') #{zxgz[i].describe}
+                      span #{moment(zxgz[i].meta.updateAt).format('MM-DD')}
+                      a(href='/movie/#{zxgz[i]._id}', title='#{zxgz[i].title}', target='_blank') #{zxgz[i].title}
+                    -if(i==15)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                    -if(i==10)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                    -if(i==5)
+                      p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
+                a.notice-con_one(href='/results?cat=#{category[6]._id}&p=0', target='_blank') &#x66F4;&#x591A;
       .col-xs-12.col-sm-6.col-md-6.col-lg-3.Top.TopIp.visible-lg.visible-xs
         .pAdding
           .main_right_one
             .main_box_s1.clearfix
-              h3.xwgg 新闻公告
+              h3.xwgg #{category[7].name}
               .more
-                a(href='list/news/news.html', target='_blank')
+                a(href='/results?cat=#{category[7]._id}&p=0', target='_blank')
                   em.ko &#xE900;
                   |更多
             .main_time
               .main_time_box
                 i.icon &#xE908;
                 .main_time_box_a
-                  h3.eo 2015&#x5E74;
-              .main_time_box1
-                .main_time_box
-                  i.icon &#xE908;
-                  .main_time_box_i1
-                    h4.bbt
-                      a(href='list/news/1511/n1511.html', target='_blank') &#x6885;&#x897F;&#x70B9;&#x51FA;&#x7F18;&#x4F55;&#x70B9;&#x7403;...
-                    p.ipac &#x5728;&#x5DF4;&#x8428;6&#x6BD4;1&#x5927;&#x80DC;&#x7F57;&#x9A6C;&#x4E4B;&#x6218;&#x4E2D;
-                  .main_time_box_i2
-                    p.mvp.co 11.26
-                    p.ipac &#x65B0;&#x95FB;
-              .main_time_box1
-                .main_time_box
-                  i.icon &#xE908;
-                  .main_time_box_i1
-                    h4.bbt
-                      a(href='list/word/1511/w15112/w15112_1.html', target='_blank') &#x597D;&#x83B1;&#x575E;&#x660E;&#x661F;&#x662F;&#x5982;&#x4F55;&#x5065;&#x8EAB;&#x7684;
-                    p.ipac &#x589E;&#x52A0;10&#x78C5;&#x7684;&#x808C;&#x8089;
-                  .main_time_box_i2
-                    p.mvp.io 11.26
-                    p.ipac &#x65B0;&#x95FB;
-              .main_time_box1
-                .main_time_box
-                  i.icon &#xE908;
-                  .main_time_box_i1
-                    h4.bbt
-                      a(href='list/404/404.html', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                    p.ipac &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                  .main_time_box_i2
-                    p.mvp.co 10.05
-                    p.ipac &#x516C;&#x544A;
-              .main_time_box1
-                .main_time_box
-                  i.icon &#xE908;
-                  .main_time_box_i1
-                    h4.bbt
-                      a(href='list/404/404.html', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                    p.ipac &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                  .main_time_box_i2
-                    p.mvp.io 10.05
-                    p.ipac &#x6D3B;&#x52A8;
-              .main_time_box1
-                .main_time_box
-                  i.icon &#xE908;
-                  .main_time_box_i1
-                    h4.bbt
-                      a(href='list/404/404.html', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                    p.ipac &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                  .main_time_box_i2
-                    p.mvp.co 10.05
-                    p.ipac &#x6D3B;&#x52A8;
-              .main_time_box1
-                .main_time_box
-                  i.icon &#xE908;
-                  .main_time_box_i1
-                    h4.bbt
-                      a(href='list/404/404.html', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                    p.ipac &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854; &#x4F60;&#x5728;&#x7B2C;&#x51E0;&#x5C42;
-                  .main_time_box_i2
-                    p.mvp.io 10.05
-                    p.ipac &#x65B0;&#x95FB;
-          .main_right_two
+                  h3.eo 2016年
+              -for(var i = xwgg.length-1; i >= 0; i--)
+                .main_time_box1
+                  .main_time_box
+                    i.icon &#xE908;
+                    .main_time_box_i1
+                      h4.bbt
+                        a(href='/movie/#{xwgg[i]._id}', target='_blank') #{xwgg[i].title.substring(0,11)}
+                      p.ipac #{xwgg[i].summary.replace(/<p>/gi,'').substring(0,13)}...
+                    .main_time_box_i2
+                      - if( !(i%2 == 0) )
+                        p.mvp.co #{moment(xwgg[i].meta.updateAt).format('MM.DD')}
+                      - else
+                        p.mvp #{moment(xwgg[i].meta.updateAt).format('MM.DD')}
+                      p.ipac #{xwgg[i].describe}
     .row
       .col-xs-12.col-sm-6.col-md-6.col-lg-9.tb
         .while.padd
           .Title
-            h2.tit.pull-left 健康快讯
+            h2.tit.pull-left #{category[8].name}
             .more.pull-right(style='margin:18px 0 ;')
-              a(href='list/message/message.html', target='_blank')
+              a(href='/results?cat=#{category[8]._id}&p=0', target='_blank')
                 em.ko &#xE900;
                 |更多
           .row.paddt
             .col-xs-12.col-sm-12.col-md-12.col-lg-4.cent.tb
               .mop
-                a(href='list/404/404.html', target='_blank')
-                  img(src='img/icon/1511261.jpg')
+                a(href='/movie/'+jkkx[jkkx.length-1]._id, target='_blank')
+                  //- img(src='img/icon/1511261.jpg')
+                  -if(jkkx[jkkx.length-1].poster)
+                        img(src='/upload/'+jkkx[jkkx.length-1].poster)
+                  -else
+                    img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
                 h3
-                  a(href='list/404/404.html', target='_blank')
+                  a(href='/movie/'+jkkx[jkkx.length-1]._id, target='_blank')=jkkx[jkkx.length-1].title.substring(0,11)
                 span
-                  a(href='list/404/404.html', target='_blank') &#x5361;&#x8DEF;&#x91CC;&#x4E0D;&#x6EE1;300&#x7684;&#x65E9;&#x9910;&#x957F;&#x4EC0;&#x4E48;&#x6837;&#xFF1F;
+                  a(href='/movie/'+jkkx[jkkx.length-1]._id, target='_blank') #{jkkx[jkkx.length-1].summary.replace(/<p>/gi,'').substring(0,30)}...
             .col-xs-12.col-sm-12.col-md-12.col-lg-4.cent.tb
               .mcp
                 .Newlist
                   h3
-                    a(href='list/hour/1511/h15113.html', target='_blank')  &#x4FEF;&#x5367;&#x6491;&#x5230;&#x5E95;&#x53EF;&#x4EE5;&#x51CF;&#x54EA;&#x91CC;&#xFF1F;&#x8D58;&#x8089;
+                    a(href='/movie/#{jkkx[jkkx.length-2]._id}', target='_blank') #{jkkx[jkkx.length-2].title.substring(0,25)}
                   p
-                    a(href='list/hour/1511/h15113.html', target='_blank')
+                    a(href='/movie/#{jkkx[jkkx.length-2]._id}', target='_blank') #{jkkx[jkkx.length-2].summary.replace(/<p>/gi,'').substring(0,50)}...
                 dl.IJ.clearfix
                   dt
-                    h4 &#x540C;&#x7C7B;&#x63A8;&#x8350;
-                  dd
-                    a(href='list/404/404.html', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  dd
-                    a(href='list/404/404.html', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  dd
-                    a(href='list/404/404.html', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854;
-                  dd
-                    a(href='list/404/404.html', target='_blank') &#x6E38;&#x6CF3;&#x62BD;&#x7B4B;&#x600E;&#x4E48;&#x7834;
-                  dd
-                    a(href='list/404/404.html', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854;
-                  dd
-                    a(href='list/404/404.html', target='_blank') &#x8FD0;&#x52A8;&#x6709;&#x4E2A;&#x91D1;&#x5B57;&#x5854;
+                    h4 同类推荐
+                  -for(var i = jkkx.length-5; i >= 0; i--)
+                    dd
+                      a(href='/movie/#{jkkx[i]._id}', target='_blank') #{jkkx[0].title.substring(0,7)}
             .col-xs-12.col-sm-12.col-md-12.col-lg-4.cent.tb
               .mcp.mi
-                h3
-                  a(href='list/fashion/1511/f15113.html', target='_blank')
-                    | &#x4E0A;&#x73ED;&#x65CF;&#x6574;&#x65E5;&#x5728;&#x7535;&#x8111;&#x524D;&#x5DE5;&#x4F5C;&#x4E45;&#x5750;&#x4E0D;&#x52A8;&#xFF0C;&#x5C0F;&#x5FC3;&#x4F1A;&#x592D;&#x5BFF;&#xFF01;
-                p
-                  a(href='list/fashion/1511/f15113.html', target='_blank')
-                    | &#x591A;&#x6570;&#x4E0A;&#x73ED;&#x65CF;&#x6574;&#x65E5;&#x5728;&#x7535;&#x8111;&#x524D;&#x5DE5;&#x4F5C;&#x4E45;&#x5750;&#x4E0D;&#x52A8;&#xFF0C;&#x5C0F;&#x5FC3;&#x4F1A;&#x592D;&#x5BFF;&#xFF01;&#x4E45;&#x5750;&#x4E0D;&#x52A8;&#x5BF9;&#x8EAB;&#x4F53;&#x6709;&#x5BB3;&#xFF0C;&#x7F8E;&#x56FD;&#x5FB7;&#x5DDE;&#x5927;&#x5B66;&#x65E5;&#x524D;&#x7814;&#x7A76;&#x53D1;&#x73B0;...
-                h3
-                  a(href='list/message/1511/l151161/l151161_1.html', target='_blank')
-                    | &#x6DF1;&#x8E72;&#x7537;&#x5973;&#x6709;&#x5DEE; &#x5BF9;&#x8EAB;&#x4F53;&#x597D;&#x5904;&#x591A;
-                p
-                  a(href='list/message/1511/l151161/l151161_1.html', target='_blank')
-                    | &#x6DF1;&#x8E72;&#x5BF9;&#x5F88;&#x591A;&#x670B;&#x53CB;&#x6765;&#x8BF4;&#x60F3;&#x5FC5;&#x4E0D;&#x518D;&#x964C;&#x751F;&#xFF0C;&#x4F5C;&#x4E3A;&#x5E38;&#x89C1;&#x7684;&#x8FD0;&#x52A8;&#x8868;&#x73B0;&#x5F62;&#x5F0F;&#xFF0C;&#x6DF1;&#x8E72;&#x5F80;&#x5F80;&#x88AB;&#x7528;&#x4F5C;&#x4F53;&#x80B2;&#x953B;&#x70BC;&#x7684;&#x8F85;&#x52A9;&#x953B;&#x70BC;&#x65B9;&#x6CD5;...
-                h3
-                  a(href='list/message/1511/l151162/l151162_1.html', target='_blank')
-                    | &#x4FEF;&#x5367;&#x6491;&#x53EF;&#x4EE5;&#x953B;&#x70BC;&#x54EA;&#x4E9B;&#x808C;&#x8089;
-                p
-                  a(href='list/message/1511/l151162/l151162_1.html', target='_blank')
-                    | &#x7531;&#x4E8E;&#x4FEF;&#x5367;&#x6491;&#x8D77;&#x4F5C;&#x7528;&#x7684;&#x90E8;&#x4F4D;&#x901A;&#x5E38;&#x662F;&#x80F3;&#x818A;&#x3001;&#x80A9;&#x8180;&#x3001;&#x540E;&#x80CC;&#x3001;&#x80F8;&#x90E8;&#xFF0C;&#x81C0;&#x90E8;&#x4EE5;&#x53CA;&#x817F;&#x90E8;&#x3002;&#x800C;&#x8FD9;&#x4E9B;&#x90E8;&#x4F4D;&#x7684;&#x808C;&#x8089;&#x7FA4;&#x4E3B;&#x8981;&#x662F;&#x80F8;&#x5927;&#x808C;&#x548C;&#x80B1;&#x4E09;&#x5934;...
+                -for(var i = jkkx.length-3; i >= 0; i--)
+                  h3
+                    a(href='/movie/#{jkkx[i]._id}', target='_blank') #{jkkx[i].title.substring(0,25)}
+                  p
+                    a(href='/movie/#{jkkx[i]._id}', target='_blank') #{jkkx[i].summary.replace(/<p>/gi,'').substring(0,50)}...
       .col-xs-12.col-sm-6.col-md-6.col-lg-3.tb
         .while.padd
           .tic
-            h2.titc &#x996E;&#x98DF;&#x5065;&#x5EB7;
+            h2.titc #{category[12].name}
             .more.pull-right(style='margin:18px 0')
-              a(href='list/diet/diet.html', target='_blank')
+              a(href='/results?cat=#{category[12]._id}&p=0', target='_blank')
                 em.ko &#xE900;
-                |                         &#x66F4;&#x591A;
+                | 更多
           ul.tao
-            li.cnb(style='height:189px; ')
-              span.cic(style='display:none') &#xE90A;
-              h4 &#x5361;&#x8DEF;&#x91CC;&#x4E0D;&#x6EE1;300&#x7684;&#x65E9;&#x9910;&#x957F;&#x4EC0;&#x4E48;&#x6837;&#xFF1F;
-              em.cn &#xE90E;
-              a.toon(href='list/diet/1511/d15112.html', style='opacity: 1; border: 1px solid #EEE;background: #F7F7F7', target='_blank')
-                img(src='img/icon/151126.jpg')
-                |                         &ldquo;&#x70E4;&#x9E21;&#x86CB;&#x706B;&#x817F;&#x676F;&rdquo;&#x5C06;&#x706B;&#x817F;&#x5377;&#x8D77;&#xFF0C;&#x7528;&#x7259;&#x7B7E;&#x56FA;&#x5B9A;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x5012;&#x5165;&#x5BCC;&#x542B;&#x86CB;&#x767D;&#x8D28;&#x7684;&#x9E21;&#x86CB;&#x4E00;&#x679A;&#xFF0C;...
-            li
-              span.cic &#xE90A;
-              h4 &#x953B;&#x70BC;&#x524D;&#x5403;&#x70B9;&#x8461;&#x8404;&#x5E72;
-              em
-              a.toon(href='list/diet/1511/d15111.html', target='_blank')
-                img(src='img/icon/151126ptg.jpg')
-                |                         &#x8461;&#x8404;&#x5E72;&#x4E00;&#x76F4;&#x662F;&#x6211;&#x7279;&#x522B;&#x949F;&#x7231;&#x7684;&#x5C0F;&#x98DF;&#x54C1;&#x3002;&#x5728;&#x8FD0;&#x52A8;&#x8BAD;&#x7EC3;&#x65F6;&#x98DF;&#x7528;&#xFF0C;&#x4F5C;&#x4E3A;&#x63D0;&#x4F9B;&#x80FD;&#x91CF;&#x7684;&#x53E3;&#x7CAE;&#x3002;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;...
-            li
-              span.cic &#xE90A;
-              h4 &#x8FD0;&#x52A8;&#x5982;&#x4F55;&#x901A;&#x8FC7;&#x996E;&#x98DF;&#x9632;&#x6B62;&#x75B2;&#x52B3;
-              em
-              a.toon(href='list/diet/1511/d15113.html', target='_blank')
-                img(src='http://www.696px.com/list/diet/1511/img/1511301.jpg')
-                |                         &#x5728;&#x5267;&#x70C8;&#x7684;&#x4F53;&#x80B2;&#x8FD0;&#x52A8;&#x540E;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5728;&#x957F;&#x9014;&#x8DCB;&#x6D89;&#x6216;&#x957F;&#x8DDD;&#x79BB;&#x8DD1;&#x6B65;&#x4E4B;&#x540E;&#xFF0C;&#x4EBA;&#x4EEC;&#x5F80;&#x5F80;&#x611F;&#x5230;&#x8170;&#x817F;&#x6216;&#x5168;&#x8EAB;&#x808C;&#x8089;&#x9178;&#x75DB;&#xFF0C;&#x75B2;&#x60EB;&#x4E0D;&#x582A;...
-            li
-              span &#xE90A;
-              h4 &#x4F60;&#x7684;&#x8FD0;&#x52A8;&#x8BA1;&#x5212;&#x624D;&#x80FD;&#x591F;&#x505A;&#x5230;&#x6700;&#x6709;&#x6548;
-              em
-              a.toon(href='list/diet/1511/d15114.html', target='_blank')
-                img(src='http://www.696px.com/list/diet/1511/img/1511302.jpg')
-                |                         &#x6BCF;15&#x5206;&#x949F;&#x559D;150&#xFF5E;300&#x6BEB;&#x5347;&#x6C34;&#x3002;
-                |                         2.1&#xFF5E;3&#x5C0F;&#x65F6;
-                |                         &#x539F;&#x5219;:&#x4E2D;&#x7B49;&#x65F6;&#x95F4;&#x7684;&#x8FD0;&#x52A8;&#xFF0C;&#x6700;&#x597D;&#x53CA;&#x65F6;&#x7ED9;&#x8EAB;&#x4F53;&#x8865;&#x5145;&#x7CD6;&#x5206;&#x4EE5;&#x514D;&#x51FA;&#x73B0;&#x4F4E;&#x8840;&#x7CD6;&#x3002;
-            li
-              span &#xE90A;
-              h4 &#x8DF3;&#x7EF3;&#x5C5E;&#x4E8E;&#x4E00;&#x79CD;&#x5168;&#x8EAB;&#x8FD0;&#x52A8;
-              em
-              a.toon(href='list/diet/1511/d15115.html', target='_blank')
-                img(src='http://www.696px.com/list/diet/1511/img/1511303.jpg')
-                |                         &#x8DF3;&#x7EF3;&#x5C5E;&#x4E8E;&#x4E00;&#x79CD;&#x5168;&#x8EAB;&#x8FD0;&#x52A8;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8DF3;&#x7EF3;&#x524D;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x70ED;&#x8EAB;&#xFF0C;&#x6D3B;&#x52A8;&#x80A9;&#x8180;&#x3001;&#x624B;&#x8155;&#x3001;&#x819D;&#x76D6;&#x3001;&#x8170;&#x90E8;&#x548C;&#x811A;&#x8E1D;...
-            li
-              span &#xE90A;
-              h4 &#x51CF;&#x80A5;&#x996E;&#x98DF;&#x7684;&#x4E00;&#x4E9B;&#x6D41;&#x8A00;&#x548C;&#x771F;&#x76F8;
-              em
-              a.toon(href='list/diet/1511/d15116.html', target='_blank')
-                img(src='http://www.696px.com/list/diet/1511/img/1511304.jpg')
-                |                         &#x6D41;&#x8A00;&#xFF1A;&#x6D41;&#x884C;&#x7684;&#x51CF;&#x80A5;&#x98DF;&#x8C31;&#x80FD;&#x505A;&#x5230;&#x51CF;&#x91CD;&#x4E0D;&#x53CD;&#x5F39;&#x3002;&#x771F;&#x76F8;&#xFF1A; &#x6309;&#x7167;&#x6D41;&#x884C;&#x51CF;&#x80A5;&#x98DF;&#x8C31;&#x8282;&#x98DF;&#x5E76;&#x4E0D;&#x662F;&#x5B9E;&#x73B0;&#x51CF;&#x91CD;&#x4E0D;&#x53CD;&#x5F39;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x5F0F;...
-            li
-              span &#xE90A;
-              h4 &#x78B3;&#x9178;&#x996E;&#x6599;&#x6240;&#x5E26;&#x6765;&#x7684;&#x5371;&#x5BB3;
-              em
-              a.toon(href='list/diet/1511/d15117.html', target='_blank')
-                img(src='http://www.696px.com/list/diet/1511/img/1511305.jpg')
-                |                         &#x4F60;&#x559D;&#x4EC0;&#x4E48;&#x996E;&#x6599;?&#x76F8;&#x4FE1;&#x5E74;&#x8F7B;&#x4EBA;&#x9009;&#x62E9;&#x7684;&#x65F6;&#x78B3;&#x9178;&#x996E;&#x6599;&#x4E0D;&#x5C11;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x94FA;&#x5929;&#x76D6;&#x5730;&#x7684;&#x5E7F;&#x544A;&#x7ED9;&#x4F60;&#x7684;&#x611F;&#x89C9;...
-            li
-              span &#xE90A;
-              h4 &#x6BCF;&#x5929;&#x8FD0;&#x52A8;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x53EF;&#x4EE5;&#x51CF;&#x80A5;
-              em
-              a.toon(href='list/diet/1511/d15118.html', target='_blank')
-                img(src='http://www.696px.com/list/diet/1511/img/1511306.jpg')
-                |                         &#x6162;&#x8DD1;&#x591A;&#x4E45;&#x80FD;&#x51CF;&#x80A5;&#xFF1F;&#x9996;&#x5148;&#x975E;&#x5E38;&#x653E;&#x677E;&#x5730;&#x8DD1;5&#x5206;&#x949F;&#xFF0C;&#x628A;&#x5B83;&#x5F53;&#x4F5C;&#x662F;&#x70ED;&#x8EAB;&#x51C6;&#x5907;&#x6D3B;&#x52A8;&#x3002;&#x7136;&#x540E;&#x52A0;&#x901F;&#x8DD1;30&#x79D2;...
+            -for(var i = ysjk.length-1; i >= 0; i--)
+              if (i == ysjk.length-1)
+                li.cnb(style='height:189px; ')
+                  span.cic(style='display:none') &#xE90A;
+                  h4 #{ysjk[i].title.substring(0,14)}
+                  em.cn &#xE90E;
+                  a.toon(href='/movie/#{ysjk[i]._id}', style='opacity: 1; border: 1px solid #EEE;background: #F7F7F7', target='_blank')
+                    -if(ysjk[ysjk.length-1].poster)
+                      img(src='/upload/'+ysjk[ysjk.length-1].poster)
+                    -else
+                      img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
+                    |&nbsp;#{ysjk[i].summary.replace(/<p>/gi,'').substring(0,36)}...
+              else
+                span.cic &#xE90A;
+                h4 #{ysjk[i].title.substring(0,14)}
+                em
+                a.toon(href='/movie/#{ysjk[i]._id}', target='_blank')
+                  -if(ysjk[ysjk.length-1].poster)
+                      img(src='/upload/'+ysjk[ysjk.length-1].poster)
+                  -else
+                    img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
+                  |&nbsp;#{ysjk[i].summary.replace(/<p>/gi,'').substring(0,36)}...
+
 block botjs
   script(src='/js/combined-39ff5da341.js')
