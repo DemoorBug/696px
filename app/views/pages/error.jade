@@ -1,0 +1,11 @@
+extends ../layout
+block topcss
+  link(href="/css/combined-8e4b131a2a.css",rel="stylesheet")
+block content
+  div.container
+    div.form-group
+      h1= message
+      h2= error.status
+    pre #{error.stack}
+block botjs
+  script(src='/js/list-93759db6d5.js')
