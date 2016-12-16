@@ -10,34 +10,34 @@ exports.index = function(req,res) {
       }
       //最热文章
       var resOne = categories[0].movies
-      var results = resOne.slice(resOne.length-4,resOne.length+4)
+      var results = resOne.slice(resOne.length-4,resOne.length)
       //首页焦点文字
       var focus = categories[1].movies
-      var Indexfocus = focus.slice(focus.length-6,focus.length+6)
+      var Indexfocus = focus.slice(focus.length-6,focus.length)
       //焦点图
       var restherr = categories[2].movies
-      var imgEm = restherr.slice(restherr.length-3,restherr.length+3)
+      var imgEm = restherr.slice(restherr.length-3,restherr.length)
       // 健身误区
       var onstherr = categories[3].movies
-      var jswq = onstherr.slice(onstherr.length-15,onstherr.length+15)
+      var jswq = onstherr.slice(onstherr.length-15,onstherr.length)
       // 生活百科
       var onsfor = categories[4].movies
-      var shbk = onsfor.slice(onsfor.length-15,onsfor.length+15)
+      var shbk = onsfor.slice(onsfor.length-15,onsfor.length)
       // 运动损伤
       var onserr = categories[5].movies
-      var ydss = onserr.slice(onserr.length-15,onserr.length+15)
+      var ydss = onserr.slice(onserr.length-15,onserr.length)
       // 最新关注
       var onszui = categories[6].movies
-      var zxgz = onszui.slice(onszui.length-15,onszui.length+15)
+      var zxgz = onszui.slice(onszui.length-15,onszui.length)
       // 最新关注
       var onsxw = categories[7].movies
-      var xwgg = onsxw.slice(onsxw.length-8,onsxw.length+8)
+      var xwgg = onsxw.slice(onsxw.length-8,onsxw.length)
       // 健康快讯
       var onskx = categories[8].movies
-      var jkkx = onskx.slice(onskx.length-11,onskx.length+11)
+      var jkkx = onskx.slice(onskx.length-6,onskx.length)
       // 饮食健康
       var onscc = categories[12].movies
-      var ysjk = onscc.slice(onscc.length-10,onscc.length+10)
+      var ysjk = onscc.slice(onscc.length-10,onscc.length)
       res.render('index',{
           title: '健身吧_696px_中国专业健身网',
           category: categories,

@@ -31,7 +31,7 @@ block content
           .main_box_s.clearfix
             h3 #{category[0].name}
             .more
-              a(href='/results?cat=#{category[0]._id}&p=0', target='_blank')
+              a(href='/results?cat=#{category[0]._id}&p=0')
                 em.ko &#xE900;
                 |更多
           .main_box_x
@@ -39,12 +39,12 @@ block content
               -for (var i = resOne.length-1; i >= 0; i--)
                 li
                   span.box_2
-                    a.box_img(href='/movie/#{resOne[i]._id}', target='_blank')
+                    a.box_img(href='/movie/#{resOne[i]._id}')
                       -if(resOne[i].poster)
                         img(src='/upload/#{resOne[i].poster}')
                       -else
                         img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
-                  a(href='/movie/#{resOne[i]._id}', target='_blank')
+                  a(href='/movie/#{resOne[i]._id}')
                     //- | #{i-4}
                     span.box #{resOne[i].summary.replace(/<p>/gi,'').substring(0,30)}…
                   span.box_1 #{resOne[i].pv}
@@ -54,13 +54,13 @@ block content
             .main_toppic
               a.lrge(href='/movie/#{Indexfocus[5]._id}', title='#{Indexfocus[5].title}') #{Indexfocus[5].title};
               .toppic
-                a(href='/movie/#{Indexfocus[5]._id}', style='color:red', target='_blank') [#{Indexfocus[3].title}]
-                a(href='/movie/#{Indexfocus[5]._id}', target='_blank') [#{Indexfocus[2].title}]
+                a(href='/movie/#{Indexfocus[5]._id}', style='color:red') [#{Indexfocus[3].title}]
+                a(href='/movie/#{Indexfocus[5]._id}') [#{Indexfocus[2].title}]
             .main_toppic
               a.lrge(href='/movie/#{Indexfocus[5]._id}', title='#{Indexfocus[5].title}') #{Indexfocus[4].title}
               .toppic
-                a(href='/movie/#{Indexfocus[5]._id}', target='_blank') [#{Indexfocus[1].title}]
-                a(href='/movie/#{Indexfocus[5]._id}', target='_blank') [#{Indexfocus[0].title}]
+                a(href='/movie/#{Indexfocus[5]._id}') [#{Indexfocus[1].title}]
+                a(href='/movie/#{Indexfocus[5]._id}') [#{Indexfocus[0].title}]
           .main_midde_two
             #notice-tit.notice-tit
               ul.clearfix
@@ -85,14 +85,14 @@ block content
                         default
                           i(style='background:#999') #{jswq[i].describe}
                       span #{moment(jswq[i].meta.updateAt).format('MM-DD')}
-                      a(href='/movie/#{jswq[i]._id}', title='#{jswq[i].title}', target='_blank') #{jswq[i].title}
+                      a(href='/movie/#{jswq[i]._id}', title='#{jswq[i].title}') #{jswq[i].title}
                     -if(i==15)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
                     -if(i==10)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
                     -if(i==5)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
-                a.notice-con_one(href='/results?cat=#{category[3]._id}&p=0', target='_blank') &#x66F4;&#x591A;
+                a.notice-con_one(href='/results?cat=#{category[3]._id}&p=0') &#x66F4;&#x591A;
               .mod
                 ul
                   -for(var i = shbk.length-1; i >= 0; i--)
@@ -109,14 +109,14 @@ block content
                         default
                           i(style='background:#999') #{shbk[i].describe}
                       span #{moment(shbk[i].meta.updateAt).format('MM-DD')}
-                      a(href='/movie/#{shbk[i]._id}', title='#{shbk[i].title}', target='_blank') #{shbk[i].title}
+                      a(href='/movie/#{shbk[i]._id}', title='#{shbk[i].title}') #{shbk[i].title}
                     -if(i==15)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
                     -if(i==10)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
                     -if(i==5)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
-                a.notice-con_one(href='/results?cat=#{category[4]._id}&p=0', target='_blank') &#x66F4;&#x591A;
+                a.notice-con_one(href='/results?cat=#{category[4]._id}&p=0') &#x66F4;&#x591A;
               .mod
                 ul
                   -for(var i = ydss.length-1; i >= 0; i--)
@@ -133,14 +133,14 @@ block content
                         default
                           i(style='background:#999') #{ydss[i].describe}
                       span #{moment(ydss[i].meta.updateAt).format('MM-DD')}
-                      a(href='/movie/#{ydss[i]._id}', title='#{ydss[i].title}', target='_blank') #{ydss[i].title}
+                      a(href='/movie/#{ydss[i]._id}', title='#{ydss[i].title}') #{ydss[i].title}
                     -if(i==15)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
                     -if(i==10)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
                     -if(i==5)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
-                a.notice-con_one(href='/results?cat=#{category[5]._id}&p=0', target='_blank') &#x66F4;&#x591A;
+                a.notice-con_one(href='/results?cat=#{category[5]._id}&p=0') &#x66F4;&#x591A;
               .mod
                 ul
                   -for(var i = zxgz.length-1; i >= 0; i--)
@@ -157,21 +157,21 @@ block content
                         default
                           i(style='background:#999') #{zxgz[i].describe}
                       span #{moment(zxgz[i].meta.updateAt).format('MM-DD')}
-                      a(href='/movie/#{zxgz[i]._id}', title='#{zxgz[i].title}', target='_blank') #{zxgz[i].title}
+                      a(href='/movie/#{zxgz[i]._id}', title='#{zxgz[i].title}') #{zxgz[i].title}
                     -if(i==15)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
                     -if(i==10)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
                     -if(i==5)
                       p(style="margin: 6px;height: 1px;border-top: 1px dashed #eaeaea;")
-                a.notice-con_one(href='/results?cat=#{category[6]._id}&p=0', target='_blank') &#x66F4;&#x591A;
+                a.notice-con_one(href='/results?cat=#{category[6]._id}&p=0') &#x66F4;&#x591A;
       .col-xs-12.col-sm-6.col-md-6.col-lg-3.Top.TopIp.visible-lg.visible-xs
         .pAdding
           .main_right_one
             .main_box_s1.clearfix
               h3.xwgg #{category[7].name}
               .more
-                a(href='/results?cat=#{category[7]._id}&p=0', target='_blank')
+                a(href='/results?cat=#{category[7]._id}&p=0')
                   em.ko &#xE900;
                   |更多
             .main_time
@@ -185,7 +185,7 @@ block content
                     i.icon &#xE908;
                     .main_time_box_i1
                       h4.bbt
-                        a(href='/movie/#{xwgg[i]._id}', target='_blank') #{xwgg[i].title.substring(0,11)}
+                        a(href='/movie/#{xwgg[i]._id}') #{xwgg[i].title.substring(0,11)}
                       p.ipac #{xwgg[i].summary.replace(/<p>/gi,'').substring(0,13)}...
                     .main_time_box_i2
                       - if( !(i%2 == 0) )
@@ -199,48 +199,50 @@ block content
           .Title
             h2.tit.pull-left #{category[8].name}
             .more.pull-right(style='margin:18px 0 ;')
-              a(href='/results?cat=#{category[8]._id}&p=0', target='_blank')
+              a(href='/results?cat=#{category[8]._id}&p=0')
                 em.ko &#xE900;
                 |更多
           .row.paddt
             .col-xs-12.col-sm-12.col-md-12.col-lg-4.cent.tb
               .mop
-                a(href='/movie/'+jkkx[jkkx.length-1]._id, target='_blank')
+                a(href='/movie/'+jkkx[jkkx.length-1]._id)
                   //- img(src='img/icon/1511261.jpg')
                   -if(jkkx[jkkx.length-1].poster)
                         img(src='/upload/'+jkkx[jkkx.length-1].poster)
                   -else
                     img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
                 h3
-                  a(href='/movie/'+jkkx[jkkx.length-1]._id, target='_blank')=jkkx[jkkx.length-1].title.substring(0,11)
+                  a(href='/movie/'+jkkx[jkkx.length-1]._id)=jkkx[jkkx.length-1].title.substring(0,11)
                 span
-                  a(href='/movie/'+jkkx[jkkx.length-1]._id, target='_blank') #{jkkx[jkkx.length-1].summary.replace(/<p>/gi,'').substring(0,30)}...
+                  a(href='/movie/'+jkkx[jkkx.length-1]._id) #{jkkx[jkkx.length-1].summary.replace(/<p>/gi,'').substring(0,30)}...
             .col-xs-12.col-sm-12.col-md-12.col-lg-4.cent.tb
               .mcp
                 .Newlist
                   h3
-                    a(href='/movie/#{jkkx[jkkx.length-2]._id}', target='_blank') #{jkkx[jkkx.length-2].title.substring(0,25)}
+                    a(href='/movie/#{jkkx[jkkx.length-2]._id}') #{jkkx[jkkx.length-2].title.substring(0,25)}
                   p
-                    a(href='/movie/#{jkkx[jkkx.length-2]._id}', target='_blank') #{jkkx[jkkx.length-2].summary.replace(/<p>/gi,'').substring(0,50)}...
+                    a(href='/movie/#{jkkx[jkkx.length-2]._id}') #{jkkx[jkkx.length-2].summary.replace(/<p>/gi,'').substring(0,50)}...
                 dl.IJ.clearfix
                   dt
                     h4 同类推荐
-                  -for(var i = jkkx.length-5; i >= 0; i--)
+                  -for(var i = 0; i < 1; i++)
+                    - var sf = 0
                     dd
-                      a(href='/movie/#{jkkx[i]._id}', target='_blank') #{jkkx[0].title.substring(0,7)}
+                      a(href='/movie/#{jkkx[sf]._id}') #{jkkx[sf].title.substring(0,7)}
             .col-xs-12.col-sm-12.col-md-12.col-lg-4.cent.tb
               .mcp.mi
-                -for(var i = jkkx.length-3; i >= 0; i--)
-                  h3
-                    a(href='/movie/#{jkkx[i]._id}', target='_blank') #{jkkx[i].title.substring(0,25)}
-                  p
-                    a(href='/movie/#{jkkx[i]._id}', target='_blank') #{jkkx[i].summary.replace(/<p>/gi,'').substring(0,50)}...
+                -for(var i = 0; i < 3; i++)
+                  - var sf = jkkx.length-3-i
+                      h3
+                        a(href='/movie/#{jkkx[sf]._id}') #{jkkx[sf].title.substring(0,25)}
+                      p
+                        a(href='/movie/#{jkkx[sf]._id}') #{jkkx[sf].summary.replace(/<p>/gi,'').substring(0,50)}...
       .col-xs-12.col-sm-6.col-md-6.col-lg-3.tb
         .while.padd
           .tic
             h2.titc #{category[12].name}
             .more.pull-right(style='margin:18px 0')
-              a(href='/results?cat=#{category[12]._id}&p=0', target='_blank')
+              a(href='/results?cat=#{category[12]._id}&p=0')
                 em.ko &#xE900;
                 | 更多
           ul.tao
@@ -250,22 +252,23 @@ block content
                   span.cic(style='display:none') &#xE90A;
                   h4 #{ysjk[i].title.substring(0,14)}
                   em.cn &#xE90E;
-                  a.toon(href='/movie/#{ysjk[i]._id}', style='opacity: 1; border: 1px solid #EEE;background: #F7F7F7', target='_blank')
+                  a.toon(href='/movie/#{ysjk[i]._id}', style='opacity: 1; border: 1px solid #EEE;background: #F7F7F7')
                     -if(ysjk[ysjk.length-1].poster)
                       img(src='/upload/'+ysjk[ysjk.length-1].poster)
                     -else
                       img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
                     |&nbsp;#{ysjk[i].summary.replace(/<p>/gi,'').substring(0,36)}...
               else
-                span.cic &#xE90A;
-                h4 #{ysjk[i].title.substring(0,14)}
-                em
-                a.toon(href='/movie/#{ysjk[i]._id}', target='_blank')
-                  -if(ysjk[ysjk.length-1].poster)
-                      img(src='/upload/'+ysjk[ysjk.length-1].poster)
-                  -else
-                    img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
-                  |&nbsp;#{ysjk[i].summary.replace(/<p>/gi,'').substring(0,36)}...
+                li
+                  span.cic &#xE90A;
+                  h4 #{ysjk[i].title.substring(0,14)}
+                  em
+                  a.toon(href='/movie/#{ysjk[i]._id}')
+                    -if(ysjk[ysjk.length-1].poster)
+                        img(src='/upload/'+ysjk[ysjk.length-1].poster)
+                    -else
+                      img(src='/svg/iconhtml(#{parseInt(26*Math.random())}).svg')
+                    |&nbsp;#{ysjk[i].summary.replace(/<p>/gi,'').substring(0,36)}...
 
 block botjs
   script(src='/js/combined-39ff5da341.js')

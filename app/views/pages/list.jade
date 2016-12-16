@@ -17,7 +17,7 @@ block content
               -for (var i = movies.length-1; i >= 0; i--)
                 li
                   span #{moment(movies[i].meta.updateAt).format('MM.DD')}
-                  a(href='/movie/#{movies[i]._id}', target='_blank', title=movies[i].title) #{movies[i].title}
+                  a(href='/movie/#{movies[i]._id}', title=movies[i].title) #{movies[i].title}
             else
               li
                 span(style="text-align:center;font-size:24px;display:block;float:none") 没有找到你想搜索的内容

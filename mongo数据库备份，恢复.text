@@ -15,10 +15,10 @@ mongorestore -h dbhost -d dbname –directoryperdb dbdirectory
 
 
 
-mongodump -h 127.0.0.1:27017 -d 696px -o D:/GitHub/696px/mongo/696px
+mongodump -h 127.0.0.1:27017 -d 696px -o D:/GitHub/696px/mongo/696px        公司电脑备份
 
 mongorestore -h 127.0.0.1:27017 -d 696px –directoryperdb E:/GitHub/696px/mongo/696px -drop
 
-mongorestore -d 696px --drop E:/GitHub/696px/mongo/696px
+mongorestore -d 696px --drop E:/GitHub/696px/mongo/696px       公司电脑恢复
 
 mongorestore -d 696px --drop D:/GitHub/696px/mongo/696px
